@@ -167,6 +167,18 @@
         "dsl": "77aebb664164473040f5d307c60c03945fca20539a74f69cb33f402dcce0a234",
         "svg": "1c814845f5ca6ee9bdd2338a7ed27820302e0f83a3dc23540e815b8da0bc3d5b"
       }
+    },
+    {
+      "code": "REP-15",
+      "file": "two-planes-circle-ellipse",
+      "collection": "examples",
+      "title": "두 평면의 교선 위에 놓인 원의 지름과 타원의 장축",
+      "summary": "두 평면이 만나는 직선 위에서 길이 18인 AB를 공유하는 원 C₁과 타원 C₂를 그린다. P의 수선의 발 H를 중심으로 하는 반지름 4의 원은 AB에 접하고 Q를 지난다.",
+      "widthMm": 140,
+      "sha256": {
+        "dsl": "3dd10861758c85226ef684e2d57bc43d3d9e42d4e6f6b0f1ee5e041c2e28e191",
+        "svg": "5a5b6d5a924bd1619ed6fbb3786ebf4138d1bc7146c1755e530c21061f3c7e4d"
+      }
     }
   ]
 }
