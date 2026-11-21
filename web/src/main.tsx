@@ -173,6 +173,7 @@ function App() {
         </a>
         <nav aria-label="주요 메뉴">
           <a href="#gallery">도면 갤러리</a>
+          <a href="/docs/">문서</a>
           <a href="#install">설치 안내</a>
           <a href={repo}>GitHub ↗</a>
         </nav>
@@ -256,6 +257,7 @@ function App() {
             <Copy value={install} />
           </div>
           <p className="mt-4">
+            <a href="/docs/quickstart/">첫 도면 만들기 →</a>{" · "}
             <a href={repo + "#readme"}>에이전트별 사용 안내 ↗</a>
           </p>
         </section>

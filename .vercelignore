@@ -4,4 +4,7 @@ web/public/skill/
 web/dist/
 web/node_modules/
 web/public/drawings/
+web/public/docs-assets/
+web/docs/index.html
+web/docs/*/index.html
 .git/

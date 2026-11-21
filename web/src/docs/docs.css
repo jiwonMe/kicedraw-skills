@@ -1,0 +1,235 @@
+.docs-header [aria-current] {
+  color: var(--blue);
+}
+.docs-layout {
+  display: grid;
+  grid-template-columns: 185px minmax(0, 1fr) 176px;
+  gap: clamp(24px, 4vw, 60px);
+  align-items: start;
+  margin-block: 36px 60px;
+}
+.docs-article {
+  max-width: 750px;
+  min-width: 0;
+}
+.docs-kicker {
+  font-size: 0.85rem;
+  font-weight: 650;
+  color: var(--blue);
+  margin-bottom: 12px;
+}
+.docs-article h1 {
+  font-size: clamp(36px, 5vw, 56px);
+}
+.docs-article h2 {
+  font-size: clamp(24px, 3vw, 32px);
+  margin: 42px 0 14px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.docs-article p,
+.docs-article li {
+  line-height: 1.75;
+}
+.docs-article p {
+  margin-block: 14px;
+}
+.docs-article ul,
+.docs-article ol {
+  margin: 12px 0;
+  padding-inline-start: 1.5em;
+}
+.docs-article ul {
+  list-style: disc;
+}
+.docs-article ol {
+  list-style: decimal;
+}
+.docs-article li + li {
+  margin-top: 6px;
+}
+.docs-article :is(p, li) a,
+.docs-toc > a,
+.docs footer a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.docs-sidebar,
+.docs-toc {
+  position: sticky;
+  top: 24px;
+  max-height: calc(100dvh - 48px);
+  overflow-y: auto;
+}
+.docs-sidebar nav,
+.docs-toc nav {
+  display: block;
+}
+.docs-nav-group {
+  margin-bottom: 20px;
+}
+.docs-nav-group strong,
+.docs-toc strong {
+  display: block;
+  color: var(--muted);
+  margin: 0 0 6px;
+}
+.docs-sidebar a,
+.docs-toc nav a {
+  display: block;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+.docs-sidebar a[aria-current] {
+  color: var(--blue);
+  background: #e9eff6;
+}
+.docs-toc > a {
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 0.85rem;
+}
+.docs-mobile-menu,
+.docs-mobile-toc {
+  display: none;
+}
+.docs-code {
+  margin-block: 16px;
+  overflow: hidden;
+  color: #ededed;
+  background: #212327;
+  border-radius: 6px;
+}
+.docs-code-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+  color: #d4d4d4;
+  border-bottom: 1px solid #484b4f;
+  font-size: 0.85rem;
+}
+.docs-code-bar button {
+  padding: 4px 9px;
+  border: 1px solid #5a5d61;
+  border-radius: 4px;
+  color: white;
+}
+.docs-code-bar button:hover {
+  background: #484b4f;
+}
+.docs-code pre {
+  padding: 14px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.65;
+}
+.docs-article :not(pre) > code {
+  padding: 0.08em 0.24em;
+  border-radius: 3px;
+  background: #eaeae5;
+  font-size: 0.88em;
+  overflow-wrap: anywhere;
+}
+.docs-article table {
+  width: 100%;
+  margin-block: 16px;
+  border-collapse: collapse;
+}
+.docs-article :is(th, td) {
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+.docs-article th {
+  background: #efefea;
+}
+.docs-example {
+  margin-block: 18px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: white;
+}
+.docs-example img {
+  width: 100%;
+  height: clamp(160px, 30vw, 270px);
+  object-fit: contain;
+  padding: 16px;
+}
+.docs-example figcaption {
+  padding: 10px 14px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.docs-downloads {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.docs-pagination {
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 36px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.docs-pagination a {
+  display: grid;
+  color: var(--blue);
+}
+.docs-pagination small {
+  color: var(--muted);
+}
+@media (max-width: 1100px) {
+  .docs-layout {
+    grid-template-columns: 160px minmax(0, 1fr);
+  }
+  .docs-toc {
+    display: none;
+  }
+  .docs-mobile-toc {
+    display: block;
+  }
+}
+@media (max-width: 720px) {
+  .docs-layout {
+    display: block;
+    margin-top: 20px;
+  }
+  .docs-sidebar {
+    position: static;
+    max-height: none;
+    margin-bottom: 25px;
+  }
+  .docs-sidebar .docs-desktop-menu {
+    display: none;
+  }
+  .docs-mobile-menu {
+    display: block;
+  }
+  .docs-mobile-menu nav {
+    padding-top: 12px;
+  }
+  .docs-header {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .docs-header nav {
+    gap: 14px;
+  }
+  .docs-article :is(th, td) {
+    padding: 7px;
+  }
+}
+.docs summary {
+  padding: 8px 12px;
+  background: #efefea;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font-weight: 650;
+  cursor: pointer;
+}

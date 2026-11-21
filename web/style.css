@@ -459,6 +459,11 @@ dialog h2 {
   }
   header {
     padding: 15px 0;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  header nav {
+    flex-wrap: wrap;
   }
   nav {
     gap: 13px;

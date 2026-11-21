@@ -1,0 +1,22 @@
+@version: "1.1.0"
+@frame: x=-5, y=-4, width=10, height=9
+A: FreePoint(-4,-2)
+B: FreePoint(4,-2)
+C: FreePoint(-1,4)
+D: MidPoint(A,B)
+E: MidPoint(B,C)
+AB: Segment(A -> B)
+BC: Segment(B -> C)
+CA: Segment(C -> A)
+CD: Segment(C -> D)
+AE: Segment(A -> E)
+G: Intersect(CD,AE,index=0)
+---annotations---
+aA: Annotation(A, label="$\mathrm{A}$", labelPosition="bottom-left", pointSize=0)
+aB: Annotation(B, label="$\mathrm{B}$", labelPosition="bottom-right", pointSize=0)
+aC: Annotation(C, label="$\mathrm{C}$", labelPosition="top", pointSize=0)
+aD: Annotation(D, label="$\mathrm{D}$", labelPosition="bottom", pointSize=0)
+aE: Annotation(E, label="$\mathrm{E}$", labelPosition="top-right", pointSize=0)
+aG: Annotation(G, label="$\mathrm{G}$", labelPosition="left", pointSize=4)
+sCD: Annotation(CD, lineDash=[4,3])
+sAE: Annotation(AE, lineDash=[4,3])

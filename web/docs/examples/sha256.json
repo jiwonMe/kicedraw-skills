@@ -1,0 +1,18 @@
+{
+  "median": {
+    "dsl": "51defefea08e7f25b85d43a3c34be13a8c4b1705d6bf7eae92dc2d3e1e23106b",
+    "svg": "a2dedc47e2369767ba2493e6cd99cc281b52f21f5fd5ed53da6062bc6200fba5"
+  },
+  "piecewise": {
+    "dsl": "7a9511984f6030c487c1f755676ab015fb273528886a6c7dcdb86bd1f0692465",
+    "svg": "387f6a0af0245dcd3f67a6b4cc5a6b7a5647350bb2c165a98694549a5b04e1d4"
+  },
+  "scalars": {
+    "dsl": "8bbb498d1c0df6232bdd1de9fa4219912053888167ba44cd3b62e154420c3c91",
+    "svg": "5554267c5ebd33d3ab40f7b7932d5dc290a65ec6637606d76b4ab115b72ab021"
+  },
+  "section": {
+    "dsl": "84e7b48d3698019f1781b6c5b1f4a30c9636a44a1875434d57e35ed8887d6c85",
+    "svg": "a969dbbdaaa8693ee9dd6ec4ad3737084c3d5afc73cf2147079703b949c7f24c"
+  }
+}

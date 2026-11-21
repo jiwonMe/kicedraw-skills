@@ -1,6 +1,9 @@
 web/node_modules/
 web/dist/
 web/public/drawings/
+web/public/docs-assets/
+web/docs/index.html
+web/docs/*/index.html
 web/public/skill/
 .vercel/
 .DS_Store
