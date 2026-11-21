@@ -155,6 +155,18 @@
         "dsl": "b609839075420c3a5475c7e19b47c129978ff82436886aed80f9680f6144cab8",
         "svg": "2d0f1793243e357274344d62975a9eccfc383e1eb4cbfa17fe2839530488b687"
       }
+    },
+    {
+      "code": "REP-14",
+      "file": "triangle-altitude-division",
+      "collection": "examples",
+      "title": "삼각형의 높이와 3:1 내분점",
+      "summary": "꼭짓점 A에서 BC에 내린 수선의 발 D와 AD를 3:1로 내분하는 점 E를 구성하고, ∠ABD와 ∠DCE를 각각 α와 β로 표시한다.",
+      "widthMm": 68,
+      "sha256": {
+        "dsl": "77aebb664164473040f5d307c60c03945fca20539a74f69cb33f402dcce0a234",
+        "svg": "1c814845f5ca6ee9bdd2338a7ed27820302e0f83a3dc23540e815b8da0bc3d5b"
+      }
     }
   ]
 }
