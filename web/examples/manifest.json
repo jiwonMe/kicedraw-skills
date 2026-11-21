@@ -131,6 +131,18 @@
         "dsl": "b09b473adcaff4e3d91d6fc3960606d422807a0d2e6e03cfe1211ce63b11380b",
         "svg": "cac6cef16952571e6e55c343762a2c3ae2e51f6759478298ae2340f2b1bc1f17"
       }
+    },
+    {
+      "code": "REP-12",
+      "file": "semicircle-three-feet",
+      "collection": "examples",
+      "title": "2012학년도 수능 27번 · 반원과 세 수선의 발",
+      "summary": "지름 AB가 2인 원에서 P를 잡고 Q, R, S를 차례로 수선의 발로 작도한다. 삼각형 AOS와 PRQ의 넓이가 각각 f(θ), g(θ)이다.",
+      "widthMm": 80,
+      "sha256": {
+        "dsl": "8c5dd887c10a3bef4ec8fe14ff94b7cd70078f3800388390e679a54c9acda05b",
+        "svg": "1ec3dcd7a9b6eaa3bf0ba689bf6e95e100bf5adbd922655829dce850dc8792b2"
+      }
     }
   ]
 }
