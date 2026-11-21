@@ -1,0 +1,37 @@
+# 편측극한: 열린 점과 닫힌 점의 높이를 구분한다.
+# @widthMm: 84
+@version: "1.1.0"
+@frame: x=-4.8, y=-1.05, width=9.6, height=6.2
+@axes: xMin=-4.5, xMax=4.5, yMin=-0.9, yMax=4.65, showLabels=false
+left: Function("-x", xMin=-4, xMax=-1, endMark="open")
+arc: Function("2+sqrt(1-x^2)", xMin=-1, xMax=0, startMark="closed", endMark="open")
+rise: Function("2*x", xMin=0, xMax=1, startMark="closed", endMark="open")
+right: Function("x", xMin=1, xMax=4, startMark="closed")
+A: PointOnPath(left, t=1)
+B: PointOnPath(arc, t=0)
+C: PointOnPath(rise, t=1)
+D: PointOnPath(right, t=0)
+U: FreePoint(-1, 0)
+V: FreePoint(1, 0)
+UB: Segment(U -> B)
+VC: Segment(V -> C)
+AD: Segment(A -> D)
+BC: Segment(B -> C)
+---annotations---
+t_x: Text(x=4.4, y=-0.25, text="$x$", isLatex=true)
+t_y: Text(x=-0.23, y=4.5, text="$y$", isLatex=true)
+t_o: Text(x=-0.23, y=-0.25, text="$\mathrm{O}$", isLatex=true)
+ann_A: Annotation(A, visible=true, pointSize=0)
+ann_B: Annotation(B, visible=true, pointSize=0)
+ann_C: Annotation(C, visible=true, pointSize=0)
+ann_D: Annotation(D, visible=true, pointSize=0)
+ann_UB: Annotation(UB, visible=true, lineDash=[4,3], lineWidth=1.4)
+ann_VC: Annotation(VC, visible=true, lineDash=[4,3], lineWidth=1.4)
+ann_AD: Annotation(AD, visible=true, lineDash=[4,3], lineWidth=1.4)
+ann_BC: Annotation(BC, visible=true, lineDash=[4,3], lineWidth=1.4)
+t_u: Text(x=-1, y=-0.28, text="$-1$", isLatex=true)
+t_v: Text(x=1, y=-0.28, text="$1$", isLatex=true)
+t_one: Text(x=-0.22, y=1.23, text="$1$", isLatex=true)
+t_two: Text(x=-0.22, y=2.24, text="$2$", isLatex=true)
+t_three: Text(x=-0.22, y=3.24, text="$3$", isLatex=true)
+t_f: Text(x=3.65, y=4.4, text="$y=f(x)$", isLatex=true)

@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "print": {
+    "defaultWidthMm": 60,
+    "lineWidthMm": 0.2,
+    "pointRadiusMm": 0.45,
+    "fontSizePt": 9,
+    "fontFamily": "'Times New Roman', Times, 'Batang', serif",
+    "ink": 0,
+    "hatchLineWidthMm": 0.1,
+    "hatchSpacingMm": 1
+  },
+  "lint": {
+    "minPointDistMm": 2.5,
+    "labelClearanceMm": 0.5,
+    "minVisibleAngleDeg": 12,
+    "maxAxisTicks": 4,
+    "nearFeatureDistMm": 0.3,
+    "accidentalIsoRatioDiff": 0.02,
+    "accidentalRightAngleToleranceDeg": 1
+  }
+}

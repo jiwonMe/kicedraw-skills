@@ -1,0 +1,4 @@
+interface:
+  display_name: "KICEDraw"
+  short_description: "수능 인쇄 스타일의 수학 도면을 작도하고 검수합니다"
+  default_prompt: "$kicedraw을 사용해 발문의 기하 관계를 보존하는 60mm 수능 도면을 만들어 주세요."

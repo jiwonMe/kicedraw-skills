@@ -1,0 +1,425 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "code": "CAL-01",
+      "title": "포물선과 x축 사이 넓이 (정적분 빗금)",
+      "summary": "포물선과 축을 경계로 잡고 수직선까지의 정적분을 표시한다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "1ce4c33c80b6acf2e1c4ca11dd680448906214aa74a5586e1d474990bc49165f",
+        "svg": "87da297dfb8bbdb86a5674e68f6ffac2a58c7913fbba8071a94e02906e48d70d"
+      }
+    },
+    {
+      "code": "CAL-02",
+      "title": "구간별 함수: 열린 점과 닫힌 점",
+      "summary": "구간 경계에서 같은 x에 열린 점과 닫힌 점을 구분한다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "7bc7f7732ee7ed9214690bf74aeaa11342677f9b6edfa5cec37b6f28150d4dad",
+        "svg": "76858fda32bee8cee9cb537ea421aae142857cc90c880ceed50362ab901b2160"
+      }
+    },
+    {
+      "code": "CAL-03",
+      "title": "이차함수와 x축의 교점",
+      "summary": "좌표축을 교점 소스로 사용해 이차함수의 절편을 표시한다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "e0f8eaf7afdc32b9badb577ebd094aee64cae6f2b521d303d752ed05102e334c",
+        "svg": "3bc8ae4e46eb74fb69acf2ac27d71b7fce590ef12b9d2e25639f436a33f0a926"
+      }
+    },
+    {
+      "code": "CAL-04",
+      "title": "두 곡선 사이 넓이",
+      "summary": "두 그래프 사이 닫힌 면에 시드를 두어 적분 구간을 구분한다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "b30c9a969ffb60248b7a6e202f3d5e3c2849ba6dd9273f9bfb4f4a6d9472874c",
+        "svg": "090270af21a2506e99617ad63124685a86d6f31bdf8255bdc2eaf7ef84d01977"
+      }
+    },
+    {
+      "code": "CAL-05",
+      "title": "외부점에서 삼차함수에 그은 접선",
+      "summary": "외부점과 곡선에서 접점을 구한 뒤 두 점을 잇는다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "b9705544847523e32f5ec1916c486da478904eb1cbf40dd560fae6467c5eb192",
+        "svg": "d8dd9f912b5174eb40f97f0b85c76efb5bf0e30237f5e3ddd4cb412d65d55ce8"
+      }
+    },
+    {
+      "code": "CAL-06",
+      "title": "절댓값 함수와 축 라벨 변경",
+      "summary": "절댓값으로 접어 올린 그래프의 뾰족점을 확인한다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "698cfb5f1a18be978b034418f3a3ca45310630bfb83d6b6fc381f7aaf81ce142",
+        "svg": "724d5976ad2beb459d41c29d485a2fed8ab698034119082b8f3fa7b9a60f62ad"
+      }
+    },
+    {
+      "code": "CAL-07",
+      "title": "삼차함수의 극점과 변곡점",
+      "summary": "두 수평 접점의 중점이 변곡점에 해당하는 대칭 구조를 읽는다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "d8971e711f6357a56dac283512d8cd863c169680615dd4fdd2034851b2347318",
+        "svg": "904a4ebd2e6bcbed96183486489aa65c26f80b18c779b3d63a681e78c271234e"
+      }
+    },
+    {
+      "code": "CAL-08",
+      "title": "움직이는 수평선과 삼차함수",
+      "summary": "수평선 높이에 따라 실근이 한 개 또는 세 개가 되는 두 경우를 비교한다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "1e843cc33697042e0e0655ca13cc5f472794415bf9c80414b5765eea2a67574e",
+        "svg": "8d8d4dd3ddc5df6485a015db3b80cb3d22a3dd0bce9f26683e73393a94f7d277"
+      }
+    },
+    {
+      "code": "CAL-09",
+      "title": "도함수의 부호와 극값의 위치",
+      "summary": "도함수의 두 영점을 지나며 원함수의 극점으로 이어지는 수선을 그린다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "5e17696cc5abf82d51e012536515422f0b8e891fc5cf0d0ac2f9b9d9ae8f9977",
+        "svg": "97ef0751fc149fbae8d90d49113c4915f7df0e638efa30f65f173fbdf2d8fa18"
+      }
+    },
+    {
+      "code": "CAL-10",
+      "title": "역함수 정적분의 넓이 분할",
+      "summary": "단조함수와 역함수 사이 영역을 y=x로 나누어 대칭인 두 부분을 비교한다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "8cf194154ff7c76671d8c6cc8183ebbd625872f15a8dc491fd748ff8d9f8dc5f",
+        "svg": "42b4f6477d3f0cde8c8c92b5022280c09b08ba5bb995eab8aa2fbcd6f90de64c"
+      }
+    },
+    {
+      "code": "EXP-01",
+      "title": "지수·로그함수 그래프와 y=x 대칭",
+      "summary": "역함수 쌍을 점선 y=x 양쪽에 배치한다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "c5b4d39c4614fc7b5a884a57d1d3c3604337aaed8df6bc7947424cf8b35fb047",
+        "svg": "4fb233232a73611815c8ba9454ed010586b3511a479550c78a6fe059ae18fd5e"
+      }
+    },
+    {
+      "code": "EXP-02",
+      "title": "유리함수와 점근선 (점선)",
+      "summary": "정의역을 두 갈래로 나누고 수평·수직 점근선을 점선으로 표시한다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "626e638738c635417b8995f63b532ef17636be54ce35d9aa6634a7aceb71a1ee",
+        "svg": "c578819d80c9bbe8b1f3d400c67508c0ad2323d2210be8d8979474f453bb519b"
+      }
+    },
+    {
+      "code": "EXP-03",
+      "title": "무리함수와 직선 사이 넓이 (세로 빗금)",
+      "summary": "제곱근 그래프와 축 사이의 넓이를 수직 경계까지 표시한다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "ee66e16e79c4838ae3c86934e21d1fa31191da878b7b12ef2cc5ae6ff43d3869",
+        "svg": "6180d401fc470db0b4ca1204ea9ffbe49584b6f4bee495c58ca76985d9a0bc34"
+      }
+    },
+    {
+      "code": "EXP-04",
+      "title": "지수·로그 역함수와 직각삼각형",
+      "summary": "기울기 −1인 선 위의 두 교점은 y=x에 대칭이다. 중점에서 직각이 생긴다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "cbf616e0e0fb217fa754dee0be390e6b3143709cc9b1550d695cc233ce1584d3",
+        "svg": "a2c31b02e07046fdcc6e8c2fea5203a9bdadbe86335ae59bea4ce06c10088db6"
+      }
+    },
+    {
+      "code": "EXP-05",
+      "title": "이동한 지수함수의 세로 절편",
+      "summary": "두 함수에 같은 수직선을 그어 교점 사이의 선분과 둘러싸인 넓이를 연결한다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "f14e449793539f07c57b3aefb42918ffe819d78f0142856afd60d93ed03e91e4",
+        "svg": "083537d5e100aeda341a8b1899255c6ce7f0b56224c7d8f6e9653ed4228f0969"
+      }
+    },
+    {
+      "code": "EXP-06",
+      "title": "절댓값 로그함수의 두 교점",
+      "summary": "같은 양의 함수값을 갖는 두 x좌표의 곱이 1인 구조를 읽는다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "85f3a73245849dbdcb310862fb7a456c0916f2875e83bd3100a5ed32685f25bc",
+        "svg": "f6efc8bb795fc571e7e420e9179bd21ef3cdcd954a7aadd3fc8de22f194ecc69"
+      }
+    },
+    {
+      "code": "TRI-01",
+      "title": "삼각형과 각 표시, 독립 텍스트",
+      "summary": "삼각형에서 내린 수선에 직각 표식을, 밑각에는 호를 쓴다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "52b67bceae12f9ed5250e54fac8b3ac04b5c555529eb1fcbfa781358879e5dd0",
+        "svg": "a631c0d53f96ecfc4c4ba53d74cf4efad4f82b1d60b66aba2f66054f22d9d8a6"
+      }
+    },
+    {
+      "code": "TRI-02",
+      "title": "원과 현으로 둘러싸인 활꼴 (회색 음영)",
+      "summary": "원 위 두 점을 잇는 현 위쪽의 활꼴만 채운다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "437260151788b320bd9578bfadcff06a742d99fc2044cad5d018d890ccfe41a5",
+        "svg": "57a26602543227489b150be5b62cef64cdf5ef555878bd9be2b82e280d6953c2"
+      }
+    },
+    {
+      "code": "TRI-03",
+      "title": "원에 내접하는 사각형",
+      "summary": "내접 사각형의 대각선을 그어 같은 현을 바라보는 원주각을 비교한다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "05b317f6d58a0b82170fe3d5decbf90f6955ac4c9338200ccf608c2569582e69",
+        "svg": "9e26743ba52325b0be9d0f51849c610bfdbc7d4a14ef7c6760a40480dcd6ba96"
+      }
+    },
+    {
+      "code": "TRI-04",
+      "title": "지름을 빗변으로 하는 삼각형",
+      "summary": "반원 위의 점을 옮겨도 지름을 바라보는 각이 직각임을 보인다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "f7e2e147f7870f7e6edcd909ddded2e583f048d722e2edacf59f58bdf400c1b4",
+        "svg": "682302b51503985cd44750eb1882eb654ca4537416deee23d54a427c4d5e17de"
+      }
+    },
+    {
+      "code": "TRI-05",
+      "title": "사인함수와 수평선",
+      "summary": "한 주기의 두 교점이 극대점의 수직선을 기준으로 대칭임을 표시한다.",
+      "widthMm": 80,
+      "sha256": {
+        "dsl": "4c4b2f5ae93ae67abcfbee5e9b77aaeef0c64ba5ccd2f8947280cbec82ce7f22",
+        "svg": "a1dab009476760d4a3ee74b971baae5b29e5cba4727bef7dd4a6aa883d4287df"
+      }
+    },
+    {
+      "code": "TRI-06",
+      "title": "삼각형의 내접원과 외접원",
+      "summary": "세 꼭짓점을 지나는 원과 세 변에 접하는 원을 한 도형에서 구분한다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "b13371437e2949049cef9303e38d6d6d759a4e0e41a01a48c716c779ab30feb9",
+        "svg": "778176d0773f391b8e3d344d59fbe73f6cbc28a0dd8f1f1b1e9d74d44c6c59d3"
+      }
+    },
+    {
+      "code": "TRI-07",
+      "title": "각의 이등분선으로 나눈 두 삼각형",
+      "summary": "각의 이등분선과 맞은편 변의 교점을 잡아 두 삼각형의 공통변을 표시한다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "0e8f084166c624594313bd3d642e117fca2877b4cda9f2c553f39fc5442da32a",
+        "svg": "f2880be825641c6f20ea1b654081fbb1b1125a6b35f09f4fb287bc79354ac9d4"
+      }
+    },
+    {
+      "code": "SEQ-01",
+      "title": "자연수 정의역의 수열",
+      "summary": "함수 위의 자연수 입력만 점으로 남겨 연속 그래프와 수열을 구분한다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "e4ed07166f2d52aeb3f5fd0971dd4de0e3424fd7ec03c3128b34d86180117b3c",
+        "svg": "84cde449866d95dc967b97ba3fdf13e128948113eb14214622dc99a2ffe24f1b"
+      }
+    },
+    {
+      "code": "SEQ-02",
+      "title": "포물선 위의 점열과 투영",
+      "summary": "서로 다른 매개변수에서 잡은 점들을 x축에 투영해 좌표열을 읽는다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "48ca02f9dca5ae863466d6ffc43339384f5fe103ae71347241acc2dd8259aa46",
+        "svg": "339b7f80f202ea925f1b8cf8f74011ecda98e02b34a2cc48130a417d06f178e8"
+      }
+    },
+    {
+      "code": "SEQ-03",
+      "title": "정삼각형의 반복 내접",
+      "summary": "무게중심을 중심으로 −1/2배 축소를 두 번 적용해 내접 닮음비를 보인다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "e65174174768cb29b1115845445111210b237f176e7d1a9fecbeceab4498beaa",
+        "svg": "8750875579b613fbdf109cce803d35d8091423e61819270bf54c00b41c8db9a1"
+      }
+    },
+    {
+      "code": "SEQ-04",
+      "title": "사분원과 내접 정사각형의 반복",
+      "summary": "반지름의 45도 방향 점을 축에 투영해 정사각형을 만들고 더 작은 사분원에서 반복한다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "01a49f38373949e70d64a9ff47983394c009f5c9a3628dd9ec1ee67d4835ba7e",
+        "svg": "805cd5c3943943c095773f1a4d7563e9768dde91e78da6780fb3250cc433483c"
+      }
+    },
+    {
+      "code": "SEQ-05",
+      "title": "동심원에 포함되는 격자점 수열",
+      "summary": "반지름 1, 2인 두 원판 안의 정수 좌표를 표시하고 누적 개수를 비교한다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "650723e0b0897ac3d8143415939c23d583ad11aaa59bcbf93f71e0e88f6e7cf4",
+        "svg": "6cf125d04c7c59c4813f24b37211bf3532c84bdca323724a21be777f43343deb"
+      }
+    },
+    {
+      "code": "CON-01",
+      "title": "포물선의 초점과 준선",
+      "summary": "포물선 위 점에서 초점과 준선까지의 같은 거리를 두 선분으로 비교한다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "ed99a1d2b9a9ebc871f543b4fca7d591979dbf91e713b1c609e623511bd6d6a8",
+        "svg": "33d827dc013af05b8646278c87f99e8c981f8aaf898f074007c6804f44814308"
+      }
+    },
+    {
+      "code": "CON-02",
+      "title": "두 초점과 타원 위의 삼각형",
+      "summary": "타원 위의 점이 움직여도 두 초점까지 거리의 합이 일정하다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "a6fcb2375635fb4f6c24aedf917f1f7d9c5d81100f529f212e3f11ee2c16351c",
+        "svg": "53306cb108d420eaf809fadca4b523ba7c689187098d1e9768ffa68c9b27c423"
+      }
+    },
+    {
+      "code": "CON-03",
+      "title": "쌍곡선의 점근선과 두 접선",
+      "summary": "보조 직사각형 꼭짓점으로 점근선을 정하고 외부점에서 두 접점을 구한다.",
+      "widthMm": 80,
+      "sha256": {
+        "dsl": "8450b8846142b2b67bafa3bc1a37cd4890aee5bd2042295dd8d7583ac8131fce",
+        "svg": "a6d88a48251e03418a2fa048c6f6afdb389179feccff1c25a6744e5c305905b4"
+      }
+    },
+    {
+      "code": "CON-04",
+      "title": "초점을 중심으로 하는 원과 타원",
+      "summary": "한 초점에서 거리가 주어진 점을 원과 타원의 두 교점으로 해석한다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "2c63002d9541bbb34ffba5c1140f3502780c56d03c22ead866e427d141c363c3",
+        "svg": "1ca221a88705e03e8f48b440a019b0ed7baa04b4136e411a5f3c21d01ee49492"
+      }
+    },
+    {
+      "code": "CON-05",
+      "title": "포물선의 접선과 축 절편",
+      "summary": "곡선 밖의 점에서 그은 접선과 y축의 교점을 함께 표시한다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "da34ee4ff3483cd67271d2408e08dbcf5d7610318216946b5a34d0dd8d736994",
+        "svg": "5e92b6726ff369019fcbfaf5d41efef34b6977ade3d8e171b457b8edc8e83451"
+      }
+    },
+    {
+      "code": "VEC-01",
+      "title": "내분점과 외분점의 위치벡터",
+      "summary": "같은 두 끝점과 비에서 얻은 내분점과 외분점으로 위치벡터를 그린다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "2e952ecbf19e6e8db584ec9615cf0d960a2343ac2e9fdf2c19684f59cf1f5ff0",
+        "svg": "25358a7a0ee8245bd90ef45a969cbc3147f182a136b44926c03fdd6d8584567a"
+      }
+    },
+    {
+      "code": "VEC-02",
+      "title": "원 위 점의 벡터합",
+      "summary": "두 위치벡터를 변으로 하는 평행사변형과 대각선의 합벡터를 구성한다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "3e762a2ac5c272b25764072cf63cd53dbd4d46891091a9723fb77ffafc860ae1",
+        "svg": "6300e63a68e3a112b1001ee358eb56d8f089961aee932c9deea1acab7370f0ef"
+      }
+    },
+    {
+      "code": "VEC-03",
+      "title": "정육각형에서의 벡터 분해",
+      "summary": "같은 중심 주위로 회전한 꼭짓점을 이어 두 변 벡터와 합벡터를 비교한다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "c552acdd78c1898b7390a4c831901ae4bdb1ee33a0c2cfc600ae30e0a411f3fa",
+        "svg": "87488ee88e8c01f5d27c24abdae2870870ae517b776629dc74b2b1c1f4732abe"
+      }
+    },
+    {
+      "code": "VEC-04",
+      "title": "단위벡터 끝점의 평행이동 자취",
+      "summary": "단위원과 기준벡터로 이동한 원에서 대응하는 끝점의 위치를 비교한다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "068b9df72df05f5bdf88bf07488ff2b8a42a52b68ebbbaa18e89e315b88378d6",
+        "svg": "c1643f4423b9bb531051d1e4605b69d3e8dff7868767108c7218fce7f77696ce"
+      }
+    },
+    {
+      "code": "SPC-01",
+      "title": "정육면체의 보이는 모서리와 숨은 모서리",
+      "summary": "기존 공간도형 픽스처의 정육면체를 분리해 뒤쪽 세 모서리만 점선으로 둔다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "da5e96543f3e123862d8f8b99a6fcac002a2b1e4fb8651e02b54fbb68e7a854a",
+        "svg": "89ff3fba688d28131d937d7a01e8f7a0b634929b6ed53bcb8b81fc1e182c305d"
+      }
+    },
+    {
+      "code": "SPC-02",
+      "title": "정육면체의 대각 단면과 이면각",
+      "summary": "앞 모서리 AB와 뒤 윗모서리 GH를 지나는 단면에서 단면과 밑면의 기울기를 비교한다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "1b74e3b7d78ec6e03f318d258a2c5df7b754d8e6b076c7fecfdfcc5d96870a91",
+        "svg": "75f62e8161cf49ce2b548ebe05d6f7db62adc0dc508b42b335b5e7ec02f6c818"
+      }
+    },
+    {
+      "code": "SPC-03",
+      "title": "삼수선과 두 수선의 발",
+      "summary": "공간점 P의 평면 위 발 H와 H에서 밑변에 내린 발 K를 같은 투영도에 표시한다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "66f8b55baf5efa802142520709913e3d00bf121b61e1a26e7dd2fe0a8f1487ba",
+        "svg": "102b3fc1a7396aaf44b09732c6309ba7d6ab95889a8abd7b8c1fc751c8c9303f"
+      }
+    },
+    {
+      "code": "SPC-04",
+      "title": "원기둥 윗면의 정사영",
+      "summary": "수평면에 평행한 두 원의 투영은 같은 타원이며 대응점을 수직 모선으로 잇는다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "78f55d9f89ec44ca5aeca798b06c6b8f1dba32bb0be3160788c96bdf16358b9e",
+        "svg": "9787032ecdc11ed7f9218ef138ce14bb13c8cdef0a2b6298ed056d8a0cf6a873"
+      }
+    },
+    {
+      "code": "SPC-05",
+      "title": "구의 평면 단면과 단면의 중심",
+      "summary": "중심 O에서 평면으로 내린 수선과 단면 반지름, 구의 반지름을 직각삼각형으로 연결한다.",
+      "widthMm": 60,
+      "sha256": {
+        "dsl": "d59cc1a737bfc8bf8da2fcd6a128859f92ea74d77d1ae378434a71efc32a7f2c",
+        "svg": "9e1a480424c2f822511dd05a25e6cbb238a5e3e322f663fca5d40b0855ba0fd1"
+      }
+    }
+  ]
+}

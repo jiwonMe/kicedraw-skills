@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="60mm" height="60mm" viewBox="0 0 709 709">
+  <rect x="0" y="0" width="709" height="709" fill="#ffffff" />
+  <path d="M 538.84 595.56 A 425.40000000000003 425.40000000000003 0 0 0 113.44000000000003 170.15999999999997" fill="none" stroke="#000000" stroke-opacity="1" stroke-width="2.3633333333333333" />
+  <path d="M 538.84 595.56 L 113.44 595.56" fill="none" stroke="#000000" stroke-opacity="1" stroke-width="2.3633333333333333" />
+  <path d="M 113.44 595.56 L 113.44000000000003 170.15999999999997" fill="none" stroke="#000000" stroke-opacity="1" stroke-width="2.3633333333333333" />
+  <path d="M 414.24322471675737 595.56 L 414.24322471675737 294.7567752832427" fill="none" stroke="#000000" stroke-opacity="1" stroke-width="2.3633333333333333" />
+  <path d="M 414.24322471675737 294.7567752832427 L 113.44000000000003 294.7567752832427" fill="none" stroke="#000000" stroke-opacity="1" stroke-width="2.3633333333333333" />
+  <path d="M 414.24322471675737 595.56 A 300.80322471675737 300.80322471675737 0 0 0 113.44000000000003 294.7567752832427" fill="none" stroke="#000000" stroke-opacity="1" stroke-width="2.3633333333333333" />
+  <path d="M 326.14000000000004 595.56 L 326.14000000000004 382.86" fill="none" stroke="#000000" stroke-opacity="1" stroke-width="2.3633333333333333" />
+  <path d="M 326.14000000000004 382.86 L 113.44 382.86" fill="none" stroke="#000000" stroke-opacity="1" stroke-width="2.3633333333333333" />
+</svg>

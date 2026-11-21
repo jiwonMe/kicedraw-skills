@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="60mm" height="51.453mm" viewBox="0 0 709 608">
+  <rect x="0" y="0" width="709" height="608" fill="#ffffff" />
+  <path d="M 50.64285714285711 506.57142857142856 L 668.4857142857143 506.57142857142856 M 101.28571428571428 557.2142857142858 L 101.28571428571428 50.78571428571428" fill="none" stroke="#000000" stroke-width="2.3633333333333333" />
+  <polygon points="668.4857142857143,506.57142857142856 647.3818861607143,497.1919494047619 647.3818861607143,515.9509077380952" fill="#000000" />
+  <polygon points="101.28571428571428,50.78571428571428 91.90623511904761,71.88954241071428 110.66519345238095,71.88954241071428" fill="#000000" />
+  <text x="682.5549330357143" y="525.3303869047619" font-family="&apos;Times New Roman&apos;, Times, &apos;Batang&apos;, serif" font-size="37.517916666666665" font-style="italic" fill="#000000" text-anchor="start" dominant-baseline="hanging">x</text>
+  <text x="120.04467261904762" y="36.71649553571428" font-family="&apos;Times New Roman&apos;, Times, &apos;Batang&apos;, serif" font-size="37.517916666666665" font-style="italic" fill="#000000" text-anchor="start" dominant-baseline="alphabetic">y</text>
+  <text x="89.56136532738094" y="518.2957775297618" font-family="&apos;Times New Roman&apos;, Times, &apos;Batang&apos;, serif" font-size="37.517916666666665" font-style="italic" fill="#000000" text-anchor="end" dominant-baseline="hanging">O</text>
+  <circle cx="202.57143059714284" cy="354.64285613000004" r="8.508" fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="0" />
+  <circle cx="303.8571408314286" cy="304.0000010128571" r="8.508" fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="0" />
+  <circle cx="405.14285714285717" cy="253.35714285714286" r="8.508" fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="0" />
+  <circle cx="506.4285734542857" cy="202.71428470142857" r="8.508" fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="0" />
+  <circle cx="607.7142836885714" cy="152.0714295842857" r="8.508" fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="0" />
+</svg>

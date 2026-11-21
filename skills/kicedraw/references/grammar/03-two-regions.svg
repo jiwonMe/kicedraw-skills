@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="60mm" height="42.821mm" viewBox="0 0 709 506">
+  <rect x="0" y="0" width="709" height="506" fill="#ffffff" />
+  <defs><pattern id="hatch-hi" patternUnits="userSpaceOnUse" width="11.816666666666666" height="11.816666666666666" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="11.816666666666666" stroke="#000000" stroke-width="1.1816666666666666" stroke-opacity="1" /></pattern></defs>
+  <path d="M 101.5 404.8 L 607.5 404.8 L 607.5 101.19999999999999 Z" fill="#d1d1d1" fill-opacity="1" fill-rule="evenodd" stroke="none" />
+  <path d="M 607.5 101.19999999999999 L 101.5 101.19999999999999 L 101.5 404.8 Z" fill="url(#hatch-hi)" fill-rule="evenodd" stroke="none" />
+  <path d="M 101.5 404.8 L 607.5 404.8" fill="none" stroke="#000000" stroke-opacity="1" stroke-width="2.3633333333333333" />
+  <path d="M 607.5 404.8 L 607.5 101.19999999999999" fill="none" stroke="#000000" stroke-opacity="1" stroke-width="2.3633333333333333" />
+  <path d="M 607.5 101.19999999999999 L 101.5 101.19999999999999" fill="none" stroke="#000000" stroke-opacity="1" stroke-width="2.3633333333333333" />
+  <path d="M 101.5 101.19999999999999 L 101.5 404.8" fill="none" stroke="#000000" stroke-opacity="1" stroke-width="2.3633333333333333" />
+  <path d="M 101.5 404.8 L 607.5 101.19999999999999" fill="none" stroke="#000000" stroke-opacity="1" stroke-width="2.3633333333333333" />
+</svg>

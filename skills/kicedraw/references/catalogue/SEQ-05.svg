@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="60mm" height="60mm" viewBox="0 0 709 709">
+  <rect x="0" y="0" width="709" height="709" fill="#ffffff" />
+  <path d="M 59.083333333333314 354.5 L 649.9166666666667 354.5 M 354.5 649.9166666666667 L 354.5 59.083333333333314" fill="none" stroke="#000000" stroke-width="2.3633333333333333" />
+  <polygon points="649.9166666666667,354.5 628.8128385416668,345.12052083333333 628.8128385416668,363.87947916666667" fill="#000000" />
+  <polygon points="354.5,59.083333333333314 345.12052083333333,80.18716145833332 363.87947916666667,80.18716145833332" fill="#000000" />
+  <text x="663.9858854166667" y="373.25895833333334" font-family="&apos;Times New Roman&apos;, Times, &apos;Batang&apos;, serif" font-size="37.517916666666665" font-style="italic" fill="#000000" text-anchor="start" dominant-baseline="hanging">x</text>
+  <text x="373.25895833333334" y="45.01411458333332" font-family="&apos;Times New Roman&apos;, Times, &apos;Batang&apos;, serif" font-size="37.517916666666665" font-style="italic" fill="#000000" text-anchor="start" dominant-baseline="alphabetic">y</text>
+  <text x="342.77565104166666" y="366.22434895833334" font-family="&apos;Times New Roman&apos;, Times, &apos;Batang&apos;, serif" font-size="37.517916666666665" font-style="italic" fill="#000000" text-anchor="end" dominant-baseline="hanging">O</text>
+  <circle cx="354.5" cy="354.5" r="5.317499999999999" fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="0" />
+  <circle cx="354.5" cy="354.5" r="118.16666666666667" fill="none" stroke="#000000" stroke-opacity="1" stroke-width="2.3633333333333333" />
+  <circle cx="354.5" cy="354.5" r="236.33333333333334" fill="none" stroke="#000000" stroke-opacity="1" stroke-width="2.3633333333333333" />
+  <circle cx="118.16666666666666" cy="354.5" r="5.317499999999999" fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="0" />
+  <circle cx="236.33333333333331" cy="472.6666666666667" r="5.317499999999999" fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="0" />
+  <circle cx="236.33333333333331" cy="354.5" r="5.317499999999999" fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="0" />
+  <circle cx="236.33333333333331" cy="236.33333333333331" r="5.317499999999999" fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="0" />
+  <circle cx="354.5" cy="590.8333333333334" r="5.317499999999999" fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="0" />
+  <circle cx="354.5" cy="472.6666666666667" r="5.317499999999999" fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="0" />
+  <circle cx="354.5" cy="236.33333333333331" r="5.317499999999999" fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="0" />
+  <circle cx="354.5" cy="118.16666666666666" r="5.317499999999999" fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="0" />
+  <circle cx="472.6666666666667" cy="472.6666666666667" r="5.317499999999999" fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="0" />
+  <circle cx="472.6666666666667" cy="354.5" r="5.317499999999999" fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="0" />
+  <circle cx="472.6666666666667" cy="236.33333333333331" r="5.317499999999999" fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="0" />
+  <circle cx="590.8333333333334" cy="354.5" r="5.317499999999999" fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="0" />
+</svg>
