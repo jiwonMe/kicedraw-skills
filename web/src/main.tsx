@@ -192,14 +192,10 @@ function App() {
       <main>
         <section className="hero">
           <div className="intro">
-            <span className="eyebrow">
-              <i />
-              수능 수학 작도 스킬
-            </span>
             <h1>
-              좌표 대신
+              수능 수학을 위한{" "}
               <br />
-              <em>관계</em>를 그립니다.
+              <em>관계기반</em> 일러스트
             </h1>
             <p>
               두 점을 잇고, 교점을 구하고, 닫힌 면을 채웁니다.
