@@ -67,7 +67,6 @@ footer {
 header,
 nav,
 .brand,
-.platemeta,
 figcaption,
 .sectionhead,
 footer,
@@ -92,8 +91,8 @@ b {
 .brand {
   gap: 10px;
   font-size: 24px;
-  font-weight: 850;
-  letter-spacing: -0.07em;
+  font-weight: 650;
+  letter-spacing: -0.04em;
 }
 nav {
   gap: 26px;
@@ -118,39 +117,17 @@ figcaption a:hover {
 }
 .hero {
   display: grid;
-  grid-template-columns: 1.06fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.06fr);
   align-items: center;
-  gap: 8%;
-  padding: 65px 0 72px;
-}
-.eyebrow,
-.sectionline,
-.platemeta,
-small {
-  font-size: 12px;
-  font-weight: 750;
-  letter-spacing: 0.04em;
-}
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-.eyebrow i {
-  width: 9px;
-  height: 9px;
-  background: var(--blue);
-  border-radius: 50%;
+  gap: clamp(24px, 4vw, 64px);
+  padding: 48px 0 56px;
 }
 h1 {
-  font-size: clamp(48px, 5.65vw, 84px);
+  font-size: clamp(44px, 5.1vw, 72px);
+  font-weight: 500;
   line-height: 1.12;
-  letter-spacing: -0.075em;
-  margin: 22px 0;
-}
-em {
-  font-style: normal;
-  color: var(--blue);
+  letter-spacing: -0.045em;
+  margin: 0 0 24px;
 }
 p {
   color: var(--muted);
@@ -176,48 +153,45 @@ p {
 }
 .plate {
   margin: 0;
-  position: relative;
-  padding: 16px 20px;
-  border: 1px solid var(--line);
-  background-color: white;
-  background-image: radial-gradient(#dadbd7 0.7px, transparent 0.7px);
-  background-size: 12px 12px;
+  min-width: 0;
+  padding: 0 24px;
 }
-.plate img {
+.plate-drawing {
+  display: block;
   width: 100%;
-  height: clamp(210px, 21vw, 305px);
-  object-fit: contain;
+  height: clamp(260px, 26vw, 360px);
   mix-blend-mode: multiply;
 }
-.platemeta,
 figcaption,
 footer,
 .dialoghead,
 .terminal {
   justify-content: space-between;
 }
-.platemeta {
-  color: var(--muted);
-}
 figcaption {
   border-top: 1px solid var(--line);
   padding-top: 12px;
   font-size: 14px;
+}
+figcaption strong {
+  display: block;
+  font-weight: 600;
+}
+.plate-id,
+.dialoghead small {
+  font-variant-numeric: tabular-nums;
+  font-size: 12px;
+  color: var(--muted);
+}
+#gallery,
+#install {
+  border-top: 1px solid var(--ink);
 }
 figcaption a,
 .dialogfoot a,
 #install p a {
   color: var(--blue);
   font-weight: 650;
-}
-.sectionline {
-  border-top: 1px solid var(--ink);
-  padding-top: 14px;
-  color: var(--muted);
-}
-.sectionline span {
-  padding: 0 7px;
-  color: #96999a;
 }
 .sectionhead {
   justify-content: space-between;
@@ -272,16 +246,12 @@ dialog button {
   font-size: 13px;
   color: var(--muted);
 }
-#grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-}
 .card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   min-width: 0;
   text-align: left;
-  padding: 15px;
+  padding: 20px;
   background: white;
   border: 1px solid var(--line);
   border-radius: 4px;
@@ -296,9 +266,13 @@ dialog button {
   object-fit: contain;
   margin: 12px 0;
 }
-.card small,
-.dialoghead small {
-  color: var(--blue);
+.card .plate-id {
+  width: 100%;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+.card:focus-visible {
+  border-color: var(--blue);
 }
 .card strong {
   display: block;
@@ -309,13 +283,15 @@ dialog button {
   display: block;
   font-size: 13px;
   color: var(--muted);
-  margin-top: 3px;
+  margin-top: auto;
+  padding-top: 4px;
 }
 #install {
-  padding: 64px 0;
+  margin-top: 64px;
+  padding: 40px 0 64px;
 }
 #install h2 {
-  margin-top: 25px;
+  margin-top: 0;
 }
 .terminal {
   max-width: 760px;
@@ -443,9 +419,6 @@ dialog h2 {
   .intro p {
     font-size: 16px;
   }
-  #grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
   .panels {
     grid-template-columns: 1fr;
   }
@@ -486,14 +459,17 @@ dialog h2 {
     gap: 28px;
   }
   h1 {
-    font-size: 50px;
-    margin: 14px 0;
+    font-size: clamp(36px, 9vw, 48px);
+    margin: 0 0 16px;
   }
   .intro p {
     margin: 8px 0;
   }
-  .plate img {
-    height: 185px;
+  .plate {
+    padding: 0;
+  }
+  .plate-drawing {
+    height: 220px;
   }
   .sectionhead {
     align-items: stretch;
@@ -501,9 +477,6 @@ dialog h2 {
   }
   .search input {
     flex: 1;
-  }
-  #grid {
-    gap: 8px;
   }
   .card {
     padding: 10px;

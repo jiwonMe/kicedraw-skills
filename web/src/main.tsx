@@ -157,6 +157,9 @@ function App() {
     window.addEventListener("hashchange", update);
     return () => window.removeEventListener("hashchange", update);
   }, []);
+  const reproductions = entries.filter(({ code }) =>
+    code.startsWith("REP-"),
+  ).length;
   const selected = entries.find((e) => e.code === hash),
     visible = entries.filter(
       (e) =>
@@ -193,42 +196,52 @@ function App() {
         <section className="hero">
           <div className="intro">
             <h1>
-              수능 수학을 위한{" "}
-              <br />
-              <em>관계기반</em> 일러스트
+              수능 수학을 위한 <br />
+              관계기반 일러스트
             </h1>
             <p>
-              두 점을 잇고, 교점을 구하고, 닫힌 면을 채웁니다.
+              삼각형의 세 점을 정하면 내접원과 외접원이 따라옵니다.
               <br />
-              기하 관계를 DSL로 적으면 인쇄용 도면이 됩니다.
+              도면을 열어 그 관계를 적은 DSL을 살펴보세요.
             </p>
             <a className="cta" href="#gallery">
               도면 살펴보기 <span>↓</span>
             </a>
           </div>
           <figure className="plate">
-            <div className="platemeta">
-              <span>작도 표본</span>
-              <span>TRI–06</span>
-            </div>
-            <img
-              src={asset("TRI-06", "svg")}
-              alt="같은 삼각형의 세 변에 접하는 내접원과 세 꼭짓점을 지나는 외접원"
-            />
+            <svg
+              className="plate-drawing"
+              viewBox="95 190 480 510"
+              role="img"
+              aria-labelledby="plate-title"
+            >
+              <title id="plate-title">
+                같은 삼각형의 세 변에 접하는 내접원과 세 꼭짓점을 지나는 외접원
+              </title>
+              <image href={asset("TRI-06", "svg")} width="709" height="709" />
+            </svg>
             <figcaption>
-              <strong>삼각형의 내접원과 외접원</strong>
+              <div>
+                <small className="plate-id">TRI-06 · 60 mm</small>
+                <strong>삼각형의 내접원과 외접원</strong>
+              </div>
               <a href="#TRI-06">DSL 보기 ↗</a>
             </figcaption>
           </figure>
         </section>
         <section id="gallery">
-          <div className="sectionline">
-            01 <span>/</span> 자료실
-          </div>
           <div className="sectionhead">
             <div>
               <h2>도면 갤러리</h2>
-              <p>도면을 선택하면 작도에 쓰인 DSL 원문을 볼 수 있습니다.</p>
+              <p>
+                {entries.length > 0 && (
+                  <>
+                    기본 도면 {entries.length - reproductions}종 · 따라 그린
+                    도면 {reproductions}종<br />
+                  </>
+                )}
+                도면을 선택하면 SVG와 DSL 원문이 함께 열립니다.
+              </p>
             </div>
             <label className="search">
               검색{" "}
@@ -268,20 +281,17 @@ function App() {
           <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-3">
             {visible.map((e) => (
               <a className="card" key={e.code} href={"#" + e.code}>
-                <small>
-                  {e.code} · {families[e.code.slice(0, 3)]}
-                </small>
                 <img loading="lazy" src={asset(e.code, "svg")} alt="" />
+                <small className="plate-id">
+                  {e.code} · {e.widthMm} mm
+                </small>
                 <strong>{e.title}</strong>
-                <span>인쇄 폭 {e.widthMm}mm · DSL 보기 ↗</span>
+                <span>{families[e.code.slice(0, 3)]}</span>
               </a>
             ))}
           </div>
         </section>
         <section id="install">
-          <div className="sectionline">
-            02 <span>/</span> 시작하기
-          </div>
           <h2>에이전트에 설치하기</h2>
           <p className="my-4">
             터미널에 아래 명령을 입력한 뒤 사용할 에이전트를 선택하세요. 스킬
