@@ -57,17 +57,17 @@ const ranges = {
   "REP-01": [17, 27.5],
   "REP-02": [48, 58],
   "REP-03": [-74, -46],
-  "REP-04": [1.12, 1.9],
+  "REP-04": [1.52, 1.98],
   "REP-05": [20, 30],
   "REP-06": [0.5, 1.42],
   "REP-07": [0.28, 1.08],
-  "REP-08": [0.06, 0.985],
+  "REP-08": [0.06, 0.83],
   "REP-09": [4.0, 3.55],
 } as const;
 export const heroRange = (id: string) => ranges[id as keyof typeof ranges];
 const margin: Record<string, number> = {
   "REP-01": 1.18,
-  "REP-02": 1.16,
+  "REP-02": 1.04,
   "REP-09": 1.1,
 };
 const swing = (id: keyof typeof ranges, u: number) => {
@@ -168,9 +168,9 @@ export function heroFrame(id: string, original: string, u: number): string {
       seed("areaF", incenter(D, C, E));
       at("f", incenter(D, C, E));
       const gMid = incenter(H, E, M);
-      // Slide toward E so the label clears the thin HM edge.
+      // A horizontal formula needs more side clearance than the circular incenter margin.
       seed("areaG", gMid);
-      at("g", gMid);
+      at("g", { x: gMid.x - 0.004, y: gMid.y + 0.003 });
       // Slightly smaller labels fit the thinner of the two regions.
       swap(
         /text="\$f\(\\theta\)\$", isLatex/,
@@ -207,9 +207,14 @@ export function heroFrame(id: string, original: string, u: number): string {
       break;
     case "REP-04":
       replace("offset=1.5)", `offset=${n(swing("REP-04", u))})`);
+      label("F", "bottom", 16, "f");
       break;
     case "REP-05":
       replace("elevation=24.2", `elevation=${n(swing("REP-05", u))}`);
+      replace('Annotation(C, visible=true, label=', 'Annotation(C, label=');
+      replace('Annotation(G, visible=true, label=', 'Annotation(G, label=');
+      label("C", "top", 38);
+      label("G", "left", 18);
       break;
     case "REP-06":
       replace("@let: mid = 0.93", `@let: mid = ${n(swing("REP-06", u))}`);
@@ -231,6 +236,7 @@ export function heroFrame(id: string, original: string, u: number): string {
     }
     case "REP-09": {
       const kk = swing("REP-09", u);
+      label("D", "bottom-left", 16);
       replace("K: FreePoint(4,0)", `K: FreePoint(${n(kk)},0)`);
       replace('"5-x"', `"${n(kk + Math.log2(kk - 2))}-x"`);
       replace("tk: Text(x=4,", `tk: Text(x=${n(kk)},`);
