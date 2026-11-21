@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@source not "./public/playground-engine";
 @theme {
   --font-sans: "SUIT", sans-serif;
   --font-display: "SUITE", "SUIT", sans-serif;

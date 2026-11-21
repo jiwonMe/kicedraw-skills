@@ -1,27 +1,8 @@
 import { useEffect, useRef } from "react";
 import { EditorState } from "@codemirror/state";
 import { EditorView, lineNumbers } from "@codemirror/view";
-import { StreamLanguage } from "@codemirror/language";
 import { githubDark } from "@uiw/codemirror-theme-github";
-
-const dsl = StreamLanguage.define({
-  token(stream) {
-    if (stream.eatSpace()) return null;
-    if (stream.match(/^#.*/)) return "comment";
-    if (stream.match(/^---[\w-]+---/)) return "keyword";
-    if (stream.match(/^@[\w-]+/)) return "meta";
-    if (stream.match(/^"(?:\\.|[^"\\])*"?/)) return "string";
-    if (stream.match(/^[+-]?(?:\d+\.?\d*|\.\d+)(?:e[+-]?\d+)?/i))
-      return "number";
-    if (stream.match(/^(?:true|false)\b/)) return "bool";
-    if (stream.match(/^[A-Za-z_][\w-]*(?=\s*[([])/)) return "typeName";
-    if (stream.match(/^[A-Za-z_][\w-]*(?=\s*=)/)) return "propertyName";
-    if (stream.match(/^[A-Za-z_][\w-]*/)) return "variableName";
-    if (stream.match(/^(?:->|[=:])/)) return "operator";
-    stream.next();
-    return null;
-  },
-});
+import { dsl } from "./dsl-language";
 
 export default function DslEditor({
   source,

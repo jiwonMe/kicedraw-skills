@@ -11,6 +11,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         gallery: input("./index.html"),
+        playground: input("./playground/index.html"),
         ...Object.fromEntries(
           docsPages.map(({ slug }) => [
             `docs-${slug || "home"}`,

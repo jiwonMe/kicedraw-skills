@@ -125,6 +125,33 @@
   font-size: 0.85rem;
   line-height: 1.65;
 }
+.docs-code .tok-comment,
+.docs-code .hljs-comment {
+  color: #a3a9b3;
+}
+.docs-code .tok-meta,
+.docs-code .tok-typeName,
+.docs-code .hljs-title {
+  color: #d2a8ff;
+}
+.docs-code .tok-keyword,
+.docs-code .tok-operator,
+.docs-code .hljs-keyword,
+.docs-code .hljs-built_in {
+  color: #ff9b8f;
+}
+.docs-code .tok-string,
+.docs-code .hljs-string {
+  color: #a5d6ff;
+}
+.docs-code .tok-number,
+.docs-code .tok-bool,
+.docs-code .tok-propertyName,
+.docs-code .hljs-number,
+.docs-code .hljs-literal,
+.docs-code .hljs-variable {
+  color: #79c0ff;
+}
 .docs-article :not(pre) > code {
   padding: 0.08em 0.24em;
   border-radius: 3px;

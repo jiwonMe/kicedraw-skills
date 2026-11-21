@@ -18,7 +18,7 @@ npm run dev --prefix web
 npm run build --prefix web
 ~~~
 
-개발 서버의 `/docs/`에서 문서를 엽니다. Markdown이나 실습 파일을 바꾼 뒤 `npm run docs:build --prefix web`을 다시 실행하세요. Vercel 배포는 `web/dist/`를 정적 사이트로 제공합니다. 브라우저에서 DSL을 실행하거나 렌더링 서비스에 접근하지 않습니다.
+개발 서버의 `/docs/`에서 문서를 엽니다. Markdown이나 실습 파일을 바꾼 뒤 `npm run docs:build --prefix web`을 다시 실행하세요. Vercel 배포는 `web/dist/`를 정적 사이트로 제공합니다. 문서 페이지는 정적 SVG를 표시합니다. [플레이그라운드](/playground/)에서만 ClassGeo 엔진을 Web Worker로 불러와 DSL을 검사하고 렌더링합니다.
 
 ## 문서와 실습 수정
 
@@ -26,6 +26,10 @@ npm run build --prefix web
 2. 완전한 실행 예제는 `web/docs/examples/`에 DSL을 둡니다. 새 예제의 이름·폭·대체 텍스트를 예제 목록에 등록하고 본문에 `~~~example 파일이름` 울타리를 넣으면 같은 원본에서 코드와 다운로드가 생성됩니다.
 3. `npm run docs:examples --prefix web`으로 예제를 검사하고 정답 SVG 및 원본 해시를 다시 만듭니다. Upmath에 내장되지 않은 수식은 이 단계에서 네트워크가 필요할 수 있습니다. DSL과 SVG, 해시를 함께 리뷰합니다.
 4. 빌드하고 각 페이지로 직접 진입해 링크와 흐름을 확인하세요. 일반 문서 빌드는 커밋된 예제만 사용합니다. 실습 B의 의도된 직각 경고는 오류가 아닙니다.
+
+## 플레이그라운드 엔진 갱신
+
+CLI 릴리스에 대응하는 ClassGeo 소스 체크아웃에서 먼저 `pnpm install`로 의존성을 준비합니다. 이 저장소 루트에서 `npm run playground:engine --prefix web -- /경로/euclidraw`를 실행해 `web/public/playground-engine/`의 브라우저 번들과 고지 파일을 갱신합니다. Vercel에서는 커밋된 번들을 제공하므로 원본 저장소가 필요하지 않습니다. `npm run playground:test --prefix web`으로 실습 SVG가 CLI 출력과 일치하는지 확인하세요. 캐시에 없는 Upmath 수식은 사용자가 허용한 경우에만 네트워크로 전송합니다.
 
 ## 갤러리 및 히어로에 기여
 

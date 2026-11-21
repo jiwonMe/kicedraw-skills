@@ -4,6 +4,7 @@ import { copyFile, mkdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import MarkdownIt from "markdown-it";
+import { highlightDocs } from "./highlight-docs";
 import { docsGroups, docsPages, docsUrl, examples } from "./docs-config";
 
 const web = fileURLToPath(new URL(".", import.meta.url));
@@ -61,9 +62,13 @@ await copyFile(
 const md = new MarkdownIt({ html: false });
 const esc = md.utils.escapeHtml;
 const originalFence = md.renderer.rules.fence!;
-const codeBlock = (code: string, language: string) => `<div class="docs-code">
+const codeBlock = (
+  code: string,
+  language: string,
+  isShell = false,
+) => `<div class="docs-code">
   <div class="docs-code-bar"><span>${esc(language)}</span><button hidden type="button" data-copy>복사</button></div>
-  <pre tabindex="0"><code>${esc(code)}</code></pre></div>`;
+  <pre tabindex="0"><code>${highlightDocs(code, isShell, esc)}</code></pre></div>`;
 md.renderer.rules.fence = (tokens, i, options, env, renderer) => {
   const token = tokens[i];
   const [kind, id] = token.info.trim().split(/\s+/);
@@ -73,10 +78,10 @@ md.renderer.rules.fence = (tokens, i, options, env, renderer) => {
     if (!example || !source) throw Error(`등록되지 않은 실습: ${id}`);
     return `<figure class="docs-example"><img src="/docs-assets/${id}.svg" alt="${esc(example.alt)}" loading="lazy"><figcaption>출력 예시 · ${example.width}mm</figcaption></figure>
     ${codeBlock(source, `${id}.dsl`)}
-    <p class="docs-downloads"><a href="/docs-assets/${id}.dsl" download>DSL 다운로드 ↓</a> <a href="/docs-assets/${id}.svg" download>SVG 다운로드 ↓</a></p>`;
+    <p class="docs-downloads"><a href="/playground/?example=${id}">플레이그라운드에서 열기 →</a> <a href="/docs-assets/${id}.dsl" download>DSL 다운로드 ↓</a> <a href="/docs-assets/${id}.svg" download>SVG 다운로드 ↓</a></p>`;
   }
   return kind === "sh" || kind === "text"
-    ? codeBlock(token.content, kind === "sh" ? "터미널" : "DSL")
+    ? codeBlock(token.content, kind === "sh" ? "터미널" : "DSL", kind === "sh")
     : originalFence(tokens, i, options, env, renderer);
 };
 const repo = "https://github.com/jiwonMe/kicedraw-skills";
@@ -135,7 +140,7 @@ for (const [i, page] of docsPages.entries()) {
 <body class="docs">
 <a class="skip" href="#content">본문 바로가기</a>
 <header class="docs-header"><a class="brand" href="/"><img src="/favicon.svg" alt="" width="32" height="32">KICEDraw</a>
-<nav aria-label="주요 메뉴"><a href="/docs/" aria-current="true">문서</a><a href="/#gallery">갤러리</a><a href="${repo}">GitHub ↗</a></nav></header>
+<nav aria-label="주요 메뉴"><a href="/docs/" aria-current="true">문서</a><a href="/playground/">플레이그라운드</a><a href="/#gallery">갤러리</a><a href="${repo}">GitHub ↗</a></nav></header>
 <main class="docs-layout">
 <aside class="docs-sidebar"><details class="docs-mobile-menu"><summary>문서 메뉴</summary><nav aria-label="문서 메뉴">${menus}</nav></details><nav class="docs-desktop-menu" aria-label="문서 메뉴">${menus}</nav></aside>
 <article id="content" tabindex="-1" class="docs-article"><p class="docs-kicker">ClassGeo DSL / ${page.group}</p><h1>${page.slug ? esc(page.title) : "ClassGeo DSL 문서"}</h1>

@@ -8,4 +8,6 @@ React + TypeScript + Tailwind CSS + Vite. 제목은 SUITE, 본문은 SUIT를 사
 
 `/docs/` 문서는 `docs/pages/`의 한국어 Markdown에서 정적 HTML로 생성한다. 페이지를 고친 뒤 `npm run docs:build --prefix web`으로 다시 생성한다. 실습 DSL을 고쳤다면 `npm run docs:examples --prefix web`으로 CLI 검사·SVG·해시를 갱신하고 함께 커밋한다. 새 페이지와 예제는 `docs-config.ts`에 등록한다.
 
-Vercel은 저장소 루트를 Root Directory로 사용한다. 설치·빌드 명령과 출력 경로는 루트 `vercel.json`에 있다. 스킬 엔진 번들은 사이트에 배포하지 않는다.
+`/playground/`는 문서 실습을 편집하고 ClassGeo Web Worker에서 검증·SVG 출력을 실행한다. 커밋된 엔진은 `public/playground-engine/`에 있고, `npm run playground:test --prefix web`으로 CLI 실습 출력과 비교할 수 있다. 엔진 재생성은 [개발 문서](docs/pages/development.md)를 참고한다.
+
+Vercel은 저장소 루트를 Root Directory로 사용한다. 설치·빌드 명령과 출력 경로는 루트 `vercel.json`에 있다. Node.js 스킬 CLI 번들과 별도로, 플레이그라운드용 브라우저 엔진을 정적 자산으로 제공한다.
