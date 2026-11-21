@@ -1,5 +1,6 @@
 import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
+import { HeroCarousel } from "./HeroCarousel";
 import "../style.css";
 
 const DslEditor = lazy(() => import("./DslEditor"));
@@ -147,11 +148,10 @@ function App() {
     return () => window.removeEventListener("hashchange", update);
   }, []);
   const selected = entries.find((e) => e.code === hash),
-    visible = entries.filter(
-      (e) =>
-        `${e.title} ${e.summary} ${e.code}`
-          .toLowerCase()
-          .includes(query.trim().toLowerCase()),
+    visible = entries.filter((e) =>
+      `${e.title} ${e.summary} ${e.code}`
+        .toLowerCase()
+        .includes(query.trim().toLowerCase()),
     );
   const close = () => {
     history.replaceState(
@@ -184,22 +184,16 @@ function App() {
               수능 수학을 위한 <br />
               관계기반 일러스트
             </h1>
-            <p>터미널에서 KICEDraw 스킬을 설치하세요.</p>
-            <div className="terminal mt-3">
-              <code>{install}</code>
-              <Copy value={install} />
-            </div>
+            <p>
+              점과 선의 관계를 DSL로 적어
+              <br />
+              수능 수학 도면을 작도하고 검수하는 에이전트 스킬입니다.
+            </p>
             <a className="cta" href="#gallery">
               도면 살펴보기 <span>↓</span>
             </a>
           </div>
-          <figure className="plate">
-            <img
-              className="plate-drawing object-contain"
-              src={asset("REP-02", "svg")}
-              alt="삼각형의 수선과 원호, 교점 E를 경계로 나뉜 두 음영 영역"
-            />
-          </figure>
+          <HeroCarousel entries={entries} />
         </section>
         <section id="gallery">
           <div className="sectionhead">

@@ -107,6 +107,18 @@
         "dsl": "aaebf9c119b13607b95fd65ee6fddcbb4229014868cbf4af4d0b6a9169b1531a",
         "svg": "195044fa0a39641c0a00e09e96394f64164923f696a217f0560f0e4e8911f9fd"
       }
+    },
+    {
+      "code": "REP-10",
+      "file": "one-sided-limits",
+      "collection": "examples",
+      "title": "구간별 함수의 좌극한과 우극한",
+      "summary": "x=−1에서 왼쪽 극한은 2, x=1에서 오른쪽 극한은 1이다. 수평 구간의 양 끝에서 열린 점과 닫힌 점을 구분한다.",
+      "widthMm": 58,
+      "sha256": {
+        "dsl": "12d39d47ef65aa97c51b746219a42f6f05ce0e680c1f8e54663d9b3b4eeb16af",
+        "svg": "643feff30575f6d623ad30df9e5bb1dbdc34f672e86b14662389fe000430c5e4"
+      }
     }
   ]
 }

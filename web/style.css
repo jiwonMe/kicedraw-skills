@@ -156,6 +156,49 @@ p {
   min-width: 0;
   padding: 0 24px;
 }
+.slide-window {
+  overflow: hidden;
+  touch-action: pan-y;
+  user-select: none;
+  cursor: grab;
+}
+.slide-window:active {
+  cursor: grabbing;
+}
+.slide-window:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+.slide-track {
+  display: flex;
+  transition: transform 260ms ease-out;
+}
+.slide-track .plate-drawing {
+  flex: 0 0 100%;
+  min-width: 0;
+  pointer-events: none;
+}
+.slide-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--muted);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.slide-controls button {
+  min-width: 36px;
+  min-height: 36px;
+}
+.slide-controls button:hover {
+  color: var(--blue);
+}
+@media (prefers-reduced-motion: reduce) {
+  .slide-track {
+    transition: none;
+  }
+}
 .plate-drawing {
   display: block;
   width: 100%;
