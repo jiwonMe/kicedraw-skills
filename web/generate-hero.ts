@@ -86,6 +86,7 @@ try {
       `from PIL import Image
 import sys,os
 frames=[Image.open(os.path.join(sys.argv[1],str(i)+'.png')).convert('RGB') for i in range(int(sys.argv[3]))]
+frames[0].save(sys.argv[2].replace('.webp','.poster.png'))
 frames+=frames[-2:0:-1]
 frames[0].save(sys.argv[2],format='WEBP',save_all=True,append_images=frames[1:],duration=int(sys.argv[4]),loop=0,lossless=True,method=4)`,
       dir,

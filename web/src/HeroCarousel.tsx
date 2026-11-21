@@ -11,6 +11,7 @@ export function HeroCarousel({
 }) {
   // The two extra panels let both seam crossings travel exactly one panel.
   const [slot, setSlot] = useState(1);
+  const [playingSlot, setPlayingSlot] = useState(1);
   const [snap, setSnap] = useState(false);
   const [drag, setDrag] = useState(0);
   const [holding, setHolding] = useState(false);
@@ -40,10 +41,11 @@ export function HeroCarousel({
     const update = () => {
       setReduce(media.matches);
       setSlot(wrap);
+      setPlayingSlot(wrap(slot));
     };
     media.addEventListener("change", update);
     return () => media.removeEventListener("change", update);
-  }, []);
+  }, [slot]);
   function move(step: number) {
     setSnap(false);
     setSlot((s) =>
@@ -104,34 +106,49 @@ export function HeroCarousel({
             if (
               e.target === e.currentTarget &&
               e.propertyName === "transform" &&
-              slot !== wrap(slot)
+              !holding
             ) {
-              setSnap(true);
-              setSlot(wrap(slot));
+              const target = wrap(slot);
+              setPlayingSlot(target);
+              if (target !== slot) {
+                setSnap(true);
+                setSlot(target);
+              }
             }
           }}
         >
           {slides.map((code, i) => (
-            <img
+            <div
               key={i}
-              className="plate-drawing object-contain"
-              draggable={false}
+              className="hero-slide plate-drawing"
               aria-hidden={i !== slot}
-              src={
-                i === wrap(slot) &&
+            >
+              <img
+                src={
+                  reduce ? `/drawings/${code}.svg` : `/hero/${code}.poster.png`
+                }
+                alt={entries.find((e) => e.code === code)?.title ?? code}
+                draggable={false}
+              />
+              {i === playingSlot &&
                 onScreen &&
                 pageVisible &&
                 !reduce &&
-                !failed.has(code)
-                  ? `/hero/${code}.webp`
-                  : `/drawings/${code}.svg`
-              }
-              onError={(e) => {
-                if (e.currentTarget.currentSrc.endsWith(".webp"))
-                  setFailed((prev) => new Set([...prev, code]));
-              }}
-              alt={entries.find((e) => e.code === code)?.title ?? code}
-            />
+                !failed.has(code) && (
+                  <img
+                    src={`/hero/${code}.webp`}
+                    alt=""
+                    draggable={false}
+                    style={{ visibility: "hidden" }}
+                    onLoad={(e) => {
+                      e.currentTarget.style.visibility = "visible";
+                    }}
+                    onError={() =>
+                      setFailed((prev) => new Set([...prev, code]))
+                    }
+                  />
+                )}
+            </div>
           ))}
         </div>
       </div>

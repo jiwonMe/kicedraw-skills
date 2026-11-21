@@ -170,7 +170,15 @@ p {
   display: flex;
   transition: transform 260ms ease-out;
 }
-.slide-track .plate-drawing {
+.hero-slide img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.slide-track .hero-slide {
+  position: relative;
   flex: 0 0 100%;
   min-width: 0;
   pointer-events: none;
