@@ -17,7 +17,23 @@ export function HeroCarousel({
   const [reduce, setReduce] = useState(
     () => matchMedia("(prefers-reduced-motion: reduce)").matches,
   );
+  const plate = useRef<HTMLDivElement>(null);
+  const [onScreen, setOnScreen] = useState(false);
+  const [pageVisible, setPageVisible] = useState(!document.hidden);
+  const [failed, setFailed] = useState<ReadonlySet<string>>(new Set());
   const start = useRef<{ id: number; x: number; y: number } | null>(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) =>
+      setOnScreen(entry.isIntersecting),
+    );
+    if (plate.current) observer.observe(plate.current);
+    const update = () => setPageVisible(!document.hidden);
+    document.addEventListener("visibilitychange", update);
+    return () => {
+      observer.disconnect();
+      document.removeEventListener("visibilitychange", update);
+    };
+  }, []);
 
   useEffect(() => {
     const media = matchMedia("(prefers-reduced-motion: reduce)");
@@ -35,12 +51,12 @@ export function HeroCarousel({
     );
   }
   useEffect(() => {
-    if (holding || reduce) return;
+    if (holding || reduce || !onScreen || !pageVisible) return;
     const timer = window.setInterval(() => {
       if (!document.hidden) move(1);
     }, 5000);
     return () => window.clearInterval(timer);
-  }, [slot, holding, reduce]);
+  }, [slot, holding, reduce, onScreen, pageVisible]);
   function reset() {
     start.current = null;
     setHolding(false);
@@ -48,6 +64,7 @@ export function HeroCarousel({
   }
   return (
     <div
+      ref={plate}
       className="plate carousel"
       role="region"
       aria-label="재현 도면 슬라이드"
@@ -100,7 +117,19 @@ export function HeroCarousel({
               className="plate-drawing object-contain"
               draggable={false}
               aria-hidden={i !== slot}
-              src={`/drawings/${code}.svg`}
+              src={
+                i === wrap(slot) &&
+                onScreen &&
+                pageVisible &&
+                !reduce &&
+                !failed.has(code)
+                  ? `/hero/${code}.webp`
+                  : `/drawings/${code}.svg`
+              }
+              onError={(e) => {
+                if (e.currentTarget.currentSrc.endsWith(".webp"))
+                  setFailed((prev) => new Set([...prev, code]));
+              }}
               alt={entries.find((e) => e.code === code)?.title ?? code}
             />
           ))}
