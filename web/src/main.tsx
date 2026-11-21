@@ -1,6 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "../style.css";
+
+const DslEditor = lazy(() => import("./DslEditor"));
 
 const repo = "https://github.com/jiwonMe/kicedraw-skills";
 const install = "npx skills add jiwonMe/kicedraw-skills --skill kicedraw -g";
@@ -109,18 +111,21 @@ function Detail({ item, close }: { item: Drawing; close: () => void }) {
           <img src={asset(item.code, "svg")} alt={item.title} />
         </figure>
         <div className="source">
-          <div>
-            <span>DSL 원문</span>
+          <div className="source-toolbar">
+            <span>DSL 원문 · {item.code}.dsl</span>
             <Copy value={source} label="코드 복사" />
           </div>
-          <pre tabIndex={0}>
-            <code>
-              {source ||
-                (error
-                  ? "원문을 불러올 수 없습니다. 아래 DSL 다운로드를 이용하세요."
-                  : "불러오는 중…")}
-            </code>
-          </pre>
+          {source ? (
+            <Suspense fallback={<p role="status">편집기를 불러오는 중…</p>}>
+              <DslEditor source={source} name={item.code} />
+            </Suspense>
+          ) : (
+            <p role="status">
+              {error
+                ? "원문을 불러올 수 없습니다. 아래 DSL 다운로드를 이용하세요."
+                : "불러오는 중…"}
+            </p>
+          )}
         </div>
       </div>
       <div className="dialogfoot">
