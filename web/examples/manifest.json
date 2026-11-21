@@ -32,68 +32,68 @@
       "summary": "하나의 직교투영 장면에서 절단면만 채우고, 구 뒤의 모서리와 가려진 호를 긴 점선으로 표시한다.",
       "widthMm": 117,
       "sha256": {
-        "dsl": "b8fef34580ee5a1519d5665e0a3b89b5455c1d736a3558a4d3753e3195c8a80a",
-        "svg": "11bc9312c4b958d8497b7161077fc1c4050a21a726bbb43f3e287aa691f12364"
+        "dsl": "3aeecd7419709757904374fe8d875fe28e87ff50df2dc54d3b33eca9e8c22da2",
+        "svg": "355e362493dba77d46dc265d54a89c9fe59dfd682be616993103c8439b1372e1"
       }
     },
     {
       "code": "REP-04",
       "file": "fig-ge29",
-      "collection": "reproductions",
+      "collection": "examples",
       "title": "GE29 · 포물선과 쌍곡선",
       "summary": "두 쌍곡선 가지와 오른쪽으로 열린 포물선 사이에 수평선과 직각 표식을 배치한다.",
-      "widthMm": 100,
+      "widthMm": 78,
       "sha256": {
-        "dsl": "d0b63f2821b0d8e8fa6c243083501d2eaa81f9544b8115705c53af0afa983ea2",
-        "svg": "1f105360cf1a94ed8103ffffd6211186880614b3962d692b7511a6e80f09b65e"
+        "dsl": "5caf48d2c0ae138e488868b0bbc1a567c78e0ae85a8d025dcc3e98fe582139ca",
+        "svg": "e30a88a40bf0025da99b120654904c4de5db4cc8840e704011753c65f854b308"
       }
     },
     {
       "code": "REP-05",
       "file": "fig-ge27",
-      "collection": "reproductions",
+      "collection": "examples",
       "title": "GE27 · 육각기둥의 단면",
       "summary": "육각기둥의 모서리 중점 M을 잡아 삼각형 GIM만 회색으로 표시한다.",
       "widthMm": 100,
       "sha256": {
-        "dsl": "979bb41c676e52d21c66ef3273431836b7371cd2773ffe69dbd2cb93180643c7",
-        "svg": "032aa1dec546989622b9f14dcfa84f74ff56c716dbc561d94293cc40c041549a"
+        "dsl": "45dfa51784dde5a268fdf583cf3cb599a44872b8b568701ad164a7e778b0445d",
+        "svg": "cf906092ad335abbc339db79b46133149f056d6d1df161325c3d3e6537179ec0"
       }
     },
     {
       "code": "REP-06",
       "file": "fig-ca26",
-      "collection": "reproductions",
+      "collection": "examples",
       "title": "CA26 · 곡선 위의 삼각 단면",
       "summary": "함수 그래프를 기저로 삼아 x=2에서의 절단 위치와 삼각 단면의 음영을 구분한다.",
-      "widthMm": 124,
+      "widthMm": 104,
       "sha256": {
-        "dsl": "e0227870dfdb98bdd0f624e1334425fcfb4718f437ea729b0c7a664281c96d35",
-        "svg": "3677d4e536065cfd3549c89df6ff64f6c9aafaaffae48a218011266b004f9b8e"
+        "dsl": "5ab39fb4346e4e7f4e8fd7093c4cb219b6775af2dd5834d942fd0c7143d3ec4c",
+        "svg": "65eccb0c8f6ab98144d3192437e3ea937a25755c05c553509f4384f55c3feaf3"
       }
     },
     {
       "code": "REP-07",
       "file": "fig-c14",
-      "collection": "reproductions",
+      "collection": "examples",
       "title": "C14 · 두 함수와 두 직선",
       "summary": "두 직선이 P를 공유하고 곡선과 각각 Q, R에서 만나는 구도를 복원한다.",
-      "widthMm": 92,
+      "widthMm": 79,
       "sha256": {
-        "dsl": "4b4844d98c4f9395082cf3c9288635908300185229cee09d856d39a3c81d2da1",
-        "svg": "be9683799145ca30df48fc36ade9d1af1e5b130968fa38f4b4a7ea2c1e5843e6"
+        "dsl": "462c55e89068197c54e37ef4bef1d4724e9de406747831be1abdc52e7e6d1349",
+        "svg": "9648aeb0c84ac14724145e2bb750e9dc8abd0851c54435f9804b3580b6d72eef"
       }
     },
     {
       "code": "REP-08",
       "file": "fig-c04",
-      "collection": "reproductions",
+      "collection": "examples",
       "title": "C04 · 구간별 함수의 극한",
       "summary": "세 경계에서 열린 점과 닫힌 점을 달리해 극한값과 함숫값을 구분한다.",
-      "widthMm": 84,
+      "widthMm": 69,
       "sha256": {
-        "dsl": "c951a3b49636e1c59771a99ef70b13edb59a01cc3de243a435e78087d37ab06d",
-        "svg": "001ff9697f115f36ec33364d0021488e0024abc391e22f13816604cf5ab3160c"
+        "dsl": "a2b5d7dd753741eea7c476e409796d1fc2a058221b14701b27b425ef68055e08",
+        "svg": "b03d8b3b0fb37c4e633406c6b352cea3f313ae8fc79d243332d133bb42343f89"
       }
     },
     {
