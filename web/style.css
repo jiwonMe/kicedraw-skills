@@ -157,6 +157,7 @@ p {
   padding: 0 24px;
 }
 .slide-window {
+  mix-blend-mode: multiply;
   overflow: hidden;
   touch-action: pan-y;
   user-select: none;
@@ -164,10 +165,6 @@ p {
 }
 .slide-window:active {
   cursor: grabbing;
-}
-.slide-window:focus-visible {
-  outline: 2px solid var(--blue);
-  outline-offset: 2px;
 }
 .slide-track {
   display: flex;
@@ -178,22 +175,6 @@ p {
   min-width: 0;
   pointer-events: none;
 }
-.slide-controls {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  justify-content: flex-end;
-  color: var(--muted);
-  font-size: 12px;
-  font-variant-numeric: tabular-nums;
-}
-.slide-controls button {
-  min-width: 36px;
-  min-height: 36px;
-}
-.slide-controls button:hover {
-  color: var(--blue);
-}
 @media (prefers-reduced-motion: reduce) {
   .slide-track {
     transition: none;
@@ -203,7 +184,6 @@ p {
   display: block;
   width: 100%;
   height: clamp(260px, 26vw, 360px);
-  mix-blend-mode: multiply;
 }
 figcaption,
 footer,

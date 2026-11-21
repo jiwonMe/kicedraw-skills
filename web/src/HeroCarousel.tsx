@@ -1,29 +1,46 @@
 import { useEffect, useRef, useState } from "react";
 
 const codes = Array.from({ length: 9 }, (_, i) => `REP-0${i + 1}`);
+const slides = [codes[codes.length - 1], ...codes, codes[0]];
+const wrap = (slot: number) => ((slot - 1 + codes.length) % codes.length) + 1;
 
 export function HeroCarousel({
   entries,
 }: {
   entries: { code: string; title: string }[];
 }) {
-  const [index, setIndex] = useState(0);
-  const [paused, setPaused] = useState(
-    () => matchMedia("(prefers-reduced-motion: reduce)").matches,
-  );
+  // The two extra panels let both seam crossings travel exactly one panel.
+  const [slot, setSlot] = useState(1);
+  const [snap, setSnap] = useState(false);
   const [drag, setDrag] = useState(0);
   const [holding, setHolding] = useState(false);
-  const [hover, setHover] = useState(false);
+  const [reduce, setReduce] = useState(
+    () => matchMedia("(prefers-reduced-motion: reduce)").matches,
+  );
   const start = useRef<{ id: number; x: number; y: number } | null>(null);
-  const move = (step: number) =>
-    setIndex((i) => (i + step + codes.length) % codes.length);
+
   useEffect(() => {
-    if (paused || holding || hover) return;
+    const media = matchMedia("(prefers-reduced-motion: reduce)");
+    const update = () => {
+      setReduce(media.matches);
+      setSlot(wrap);
+    };
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, []);
+  function move(step: number) {
+    setSnap(false);
+    setSlot((s) =>
+      s < 1 || s > codes.length ? s : reduce ? wrap(s + step) : s + step,
+    );
+  }
+  useEffect(() => {
+    if (holding || reduce) return;
     const timer = window.setInterval(() => {
       if (!document.hidden) move(1);
     }, 5000);
     return () => window.clearInterval(timer);
-  }, [paused, holding, hover, index]);
+  }, [slot, holding, reduce]);
   function reset() {
     start.current = null;
     setHolding(false);
@@ -34,21 +51,11 @@ export function HeroCarousel({
       className="plate carousel"
       role="region"
       aria-label="재현 도면 슬라이드"
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
     >
       <div
         className="slide-window"
-        tabIndex={0}
-        aria-label="좌우 방향키 또는 드래그로 도면 넘기기"
-        onKeyDown={(e) => {
-          if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
-            e.preventDefault();
-            move(e.key === "ArrowLeft" ? -1 : 1);
-          }
-        }}
         onPointerDown={(e) => {
-          if (!e.isPrimary || e.button !== 0) return;
+          if (!e.isPrimary || e.button !== 0 || slot !== wrap(slot)) return;
           e.currentTarget.setPointerCapture(e.pointerId);
           start.current = { id: e.pointerId, x: e.clientX, y: e.clientY };
           setHolding(true);
@@ -73,37 +80,31 @@ export function HeroCarousel({
         <div
           className="slide-track"
           style={{
-            transform: `translateX(calc(-${index * 100}% + ${drag}px))`,
-            transition: holding ? "none" : undefined,
+            transform: `translateX(calc(-${slot * 100}% + ${drag}px))`,
+            transition: holding || snap || reduce ? "none" : undefined,
+          }}
+          onTransitionEnd={(e) => {
+            if (
+              e.target === e.currentTarget &&
+              e.propertyName === "transform" &&
+              slot !== wrap(slot)
+            ) {
+              setSnap(true);
+              setSlot(wrap(slot));
+            }
           }}
         >
-          {codes.map((code, i) => (
+          {slides.map((code, i) => (
             <img
-              key={code}
+              key={i}
               className="plate-drawing object-contain"
               draggable={false}
-              aria-hidden={i !== index}
+              aria-hidden={i !== slot}
               src={`/drawings/${code}.svg`}
               alt={entries.find((e) => e.code === code)?.title ?? code}
             />
           ))}
         </div>
-      </div>
-      <div className="slide-controls">
-        <span aria-live={paused ? "polite" : "off"}>{codes[index]} / 09</span>
-        <button type="button" onClick={() => move(-1)} aria-label="이전 도면">
-          ←
-        </button>
-        <button
-          type="button"
-          aria-label={paused ? "자동 재생 시작" : "자동 재생 정지"}
-          onClick={() => setPaused((p) => !p)}
-        >
-          {paused ? "재생" : "정지"}
-        </button>
-        <button type="button" onClick={() => move(1)} aria-label="다음 도면">
-          →
-        </button>
       </div>
     </div>
   );
