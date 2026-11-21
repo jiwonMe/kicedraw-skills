@@ -195,6 +195,15 @@ export function heroFrame(id: string, original: string, u: number): string {
     }
     case "REP-03":
       replace("azimuth=-60", `azimuth=${n(swing("REP-03", u))}`);
+      // Text(x,y) is in page coordinates. Project these two label anchors
+      // with the same scene as their geometry on every camera frame.
+      replace("---annotations---", [
+        "planeLabel: Point3D(s, x=-4, y=-3.6, z=-2.2)",
+        "---annotations---",
+      ].join("\n"));
+      swap(/^name_p: Text\(.*$/m, String.raw`name_p: Annotation(planeLabel, label="$\alpha$", labelPosition="right", labelDistance=10, pointSize=0)`, "plane name");
+      swap(/^name_c: Text\(.*$/m, String.raw`name_c: Annotation(E, label="$\mathrm{C}_1$", labelPosition="left", labelDistance=20, pointSize=0)`, "section name");
+      label("A", "bottom-left", 18);
       break;
     case "REP-04":
       replace("offset=1.5)", `offset=${n(swing("REP-04", u))})`);
