@@ -136,6 +136,16 @@ p {
 .intro p {
   font-size: 18px;
 }
+.construction-line {
+  display: block;
+  margin: 12px 0 8px;
+  padding-left: 12px;
+  border-left: 2px solid var(--blue);
+  font:
+    14px/1.6 ui-monospace,
+    monospace;
+  color: var(--ink);
+}
 .cta {
   display: inline-flex;
   gap: 30px;
@@ -223,11 +233,20 @@ h2 {
   max-width: 100%;
 }
 #filters {
-  display: flex;
-  gap: 7px;
-  flex-wrap: wrap;
+  gap: 4px 16px;
+  padding: 0 0 12px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--line);
 }
-#filters button,
+#filters button {
+  padding: 8px 0 4px;
+  border-bottom: 2px solid transparent;
+  color: var(--muted);
+  font-size: 14px;
+}
+#filters button:hover {
+  color: var(--ink);
+}
 dialog button {
   color: var(--ink);
   background: transparent;
@@ -237,12 +256,12 @@ dialog button {
   padding: 7px 12px;
 }
 #filters [aria-pressed="true"] {
-  background: var(--ink);
-  color: white;
-  border-color: var(--ink);
+  color: var(--blue);
+  font-weight: 600;
+  border-color: currentColor;
 }
-#count {
-  margin: 16px 0 8px;
+#count:not(.sr-only) {
+  margin: 0 0 12px;
   font-size: 13px;
   color: var(--muted);
 }
@@ -259,6 +278,10 @@ dialog button {
 }
 .card:hover {
   border-color: var(--blue);
+}
+.card:hover strong,
+.card:focus-visible strong {
+  color: var(--blue);
 }
 .card img {
   width: 100%;

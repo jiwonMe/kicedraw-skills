@@ -200,10 +200,12 @@ function App() {
               관계기반 일러스트
             </h1>
             <p>
-              수선의 발과 교점이 두 음영 영역의 경계를 정합니다.
-              <br />
-              도면을 열어 그 관계를 적은 DSL을 살펴보세요.
+              점 M에서 직선 BA에 수선을 내리면 H가 정해집니다.
+              <br />이 작도를 DSL로 쓰면 한 줄입니다.
             </p>
+            <code className="construction-line">
+              H: Projection(M onto B -&gt; A)
+            </code>
             <a className="cta" href="#gallery">
               도면 살펴보기 <span>↓</span>
             </a>
@@ -231,10 +233,9 @@ function App() {
                 {entries.length > 0 && (
                   <>
                     기본 도면 {entries.length - reproductions}종 · 따라 그린
-                    도면 {reproductions}종<br />
+                    도면 {reproductions}종
                   </>
                 )}
-                도면을 선택하면 SVG와 DSL 원문이 함께 열립니다.
               </p>
             </div>
             <label className="search">
@@ -263,18 +264,31 @@ function App() {
               </button>
             ))}
           </div>
-          <div id="count" role="status">
+          <div
+            id="count"
+            role="status"
+            className={
+              entries.length > 0 && !failed && visible.length === entries.length
+                ? "sr-only"
+                : undefined
+            }
+          >
             {failed
               ? "갤러리를 불러오지 못했습니다. 새로고침해 주세요."
               : !entries.length
                 ? "도면을 불러오는 중…"
                 : visible.length
-                  ? `도면 ${visible.length}종`
+                  ? `${family === "전체" ? "전체" : families[family]} · ${visible.length}종`
                   : "검색 결과가 없습니다. 다른 검색어나 분야를 선택해 주세요."}
           </div>
           <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-3">
             {visible.map((e) => (
-              <a className="card" key={e.code} href={"#" + e.code}>
+              <a
+                className="card"
+                key={e.code}
+                href={"#" + e.code}
+                aria-label={`${e.title} — 도면과 DSL 보기`}
+              >
                 <img loading="lazy" src={asset(e.code, "svg")} alt="" />
                 <small className="plate-id">
                   {e.code} · {e.widthMm} mm
