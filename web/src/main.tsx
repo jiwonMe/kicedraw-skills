@@ -11,6 +11,7 @@ interface Drawing {
   widthMm: number;
 }
 const families: Readonly<Record<string, string>> = {
+  REP: "따라 그린 도면",
   CAL: "미적분",
   EXP: "지수·로그",
   TRI: "삼각형·삼각함수",
