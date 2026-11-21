@@ -136,16 +136,6 @@ p {
 .intro p {
   font-size: 18px;
 }
-.construction-line {
-  display: block;
-  margin: 12px 0 8px;
-  padding-left: 12px;
-  border-left: 2px solid var(--blue);
-  font:
-    14px/1.6 ui-monospace,
-    monospace;
-  color: var(--ink);
-}
 .cta {
   display: inline-flex;
   gap: 30px;
@@ -177,15 +167,6 @@ footer,
 .dialoghead,
 .terminal {
   justify-content: space-between;
-}
-figcaption {
-  border-top: 1px solid var(--line);
-  padding-top: 12px;
-  font-size: 14px;
-}
-figcaption strong {
-  display: block;
-  font-weight: 600;
 }
 .plate-id,
 .dialoghead small {

@@ -199,13 +199,11 @@ function App() {
               수능 수학을 위한 <br />
               관계기반 일러스트
             </h1>
-            <p>
-              점 M에서 직선 BA에 수선을 내리면 H가 정해집니다.
-              <br />이 작도를 DSL로 쓰면 한 줄입니다.
-            </p>
-            <code className="construction-line">
-              H: Projection(M onto B -&gt; A)
-            </code>
+            <p>터미널에서 KICEDraw 스킬을 설치하세요.</p>
+            <div className="terminal mt-3">
+              <code>{install}</code>
+              <Copy value={install} />
+            </div>
             <a className="cta" href="#gallery">
               도면 살펴보기 <span>↓</span>
             </a>
@@ -216,13 +214,6 @@ function App() {
               src={asset("REP-02", "svg")}
               alt="삼각형의 수선과 원호, 교점 E를 경계로 나뉜 두 음영 영역"
             />
-            <figcaption>
-              <div>
-                <small className="plate-id">REP-02 · 95 mm</small>
-                <strong>삼각형의 수선과 원호</strong>
-              </div>
-              <a href="#REP-02">DSL 보기 ↗</a>
-            </figcaption>
           </figure>
         </section>
         <section id="gallery">
