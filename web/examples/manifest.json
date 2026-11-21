@@ -68,8 +68,8 @@
       "summary": "함수 그래프를 기저로 삼아 x=2에서의 절단 위치와 삼각 단면의 음영을 구분한다.",
       "widthMm": 104,
       "sha256": {
-        "dsl": "5ab39fb4346e4e7f4e8fd7093c4cb219b6775af2dd5834d942fd0c7143d3ec4c",
-        "svg": "65eccb0c8f6ab98144d3192437e3ea937a25755c05c553509f4384f55c3feaf3"
+        "dsl": "d0f57127deb60e88aa7b48d360671a85a1735b5a8f3bdb24f0cc3ed2b9a8b013",
+        "svg": "8019cedec671f03e47dec977e98aff4480409479bad74927db6e21de48216be3"
       }
     },
     {
@@ -128,8 +128,8 @@
       "summary": "닫힌 구간 [0,4]에서 (0,0), (1,4), (2,1), (3,4), (4,3)을 차례로 잇는다. 정수 좌표의 점선 격자로 각 꼭짓점의 위치를 읽는다.",
       "widthMm": 60,
       "sha256": {
-        "dsl": "b09b473adcaff4e3d91d6fc3960606d422807a0d2e6e03cfe1211ce63b11380b",
-        "svg": "cac6cef16952571e6e55c343762a2c3ae2e51f6759478298ae2340f2b1bc1f17"
+        "dsl": "f588d88d162a2be0e75d88e2ab0c98562e1934a5aae8b0a49a816595cb678b84",
+        "svg": "3ebbdb5f6ea30cb35c0bf1379ebb7f9252165827ab18b8e3665626ee4acc098b"
       }
     },
     {
@@ -176,8 +176,8 @@
       "summary": "두 평면이 만나는 직선 위에서 길이 18인 AB를 공유하는 원 C₁과 타원 C₂를 그린다. P의 수선의 발 H를 중심으로 하는 반지름 4의 원은 AB에 접하고 Q를 지난다.",
       "widthMm": 140,
       "sha256": {
-        "dsl": "3dd10861758c85226ef684e2d57bc43d3d9e42d4e6f6b0f1ee5e041c2e28e191",
-        "svg": "5a5b6d5a924bd1619ed6fbb3786ebf4138d1bc7146c1755e530c21061f3c7e4d"
+        "dsl": "2d305a5fcdc2e48c824fe8f3d293d7933f582177ee8092e2e407fc5b4810c4a8",
+        "svg": "e7e0a411e450cc267c6426e0048611d0dd058aeb366bd2c8fa861750c2bf8799"
       }
     }
   ]

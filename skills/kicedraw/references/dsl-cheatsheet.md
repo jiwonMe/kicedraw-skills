@@ -27,6 +27,7 @@ MidPoint(pointA, pointB)
   Exact midpoint of A and B.
 PointOnPath(pathId, t=<0~1>)
   Point on Segment/curve; t=0 start, t=1 end, t=0.5 midpoint-like.
+Projection(point onto Axis(x)) / Projection(point onto Axis(y)) — live perpendicular foot on a coordinate axis.
 Projection(point onto lineP1 -> lineP2)
   Foot of perpendicular from point to line through lineP1-lineP2.
 Intersect(source1, source2, index=<0|1|...>)
@@ -200,6 +201,9 @@ SegmentStyle(pathId, from=<t 0~1>, to=<t 0~1>, lineColor=<int>, lineWidth=<n>, l
   Coordinate axes as a document setting (one per document, header line). Never draw axes as Segments.
   Intersect with axes via sources Axis(x) / Axis(y). Visible axes bound FillRegion faces.
 
+@let: a = 18/2
+@solve: h = root(0, a; h^2-5)
+  Scalar declarations resolve in source order at DSL load. root is a bracketed real zero of a continuous residual in the declared unknown. Use ${h} or ${sqrt(a)/2} in numeric arguments, arrays and curve expressions; never paste externally rounded roots. Keep camera/layout choices separate from givens. Trig uses radians.
 @const: a=2 [-5..5 step 0.5], b=-1
   Document constants (header line) used in Function/ParametricCurve expressions. Undefined names → invalid graph.
   Asymptotes: draw as Line through two hidden FreePoints with lineDash=[6,4].

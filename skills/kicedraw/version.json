@@ -1,8 +1,8 @@
 {
   "name": "kicedraw",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "files": {
-    "SKILL.md": "7a9c28873cf27e3c49093d2f693f0cd42d24ed89b5aabfe5a172aa1a6ddd766f",
+    "SKILL.md": "4e0e3cf8b2401c88d8da72277f9380cceb285b668425f13530244856b259ffa2",
     "README.md": "6a89c80179569e0468b44ca7670845d0b6bd238dfa47fe7711b8eb15f7ddfe7b",
     "LICENSE": "31423bd612ac4a20fea094bdce2c5c373eb4495d2dbd26cbd8ac7ed2e5b61c5f",
     "agents/openai.yaml": "217ae78f9e65ee16004eb2afc16d8a731658d469ef2cbd8151d2ead47c389b9f",
@@ -14,7 +14,7 @@
     "references/workflow-drawing.md": "a56fff9b67229d8889009b695e6b639b2004a1ff49b5504a1471718cc00885b8",
     "references/workflow-critique.md": "f0f4a6bba84d158d120a4d78bd12729b4248d62f8e72fa581b6de3486c09cac7",
     "references/drafting-standard.md": "62af0182c341212e5953e0d6e2da8f15c385f349acfb78ce486be50ea2d2a177",
-    "references/dsl-cheatsheet.md": "11a42096daaed18446adadd230732642a33714153ae6c7cb6bf3dfb402b20f17",
+    "references/dsl-cheatsheet.md": "dde4c6a5c00ed0777170ca3a8265ed6cb7e49f5d56b98c76fb717060fb7f8edf",
     "references/grammar/01-construction.dsl": "80869c8eb3442cb8fb716f0bc6becbfdbbd96128417d19ef82bd5dee19c2b686",
     "references/grammar/01-construction.svg": "fb50c2b50b963c5177d4f3ca32723a0bc0a4b4de5aec4a25ea30d2043688085d",
     "references/grammar/02-endpoints.dsl": "3df2287221f784bb94615c468c33075c32050bf1e50a77a955b3b6a8d8ec6aef",
@@ -126,6 +126,6 @@
     "references/catalogue/SPC-04.svg": "9787032ecdc11ed7f9218ef138ce14bb13c8cdef0a2b6298ed056d8a0cf6a873",
     "references/catalogue/SPC-05.dsl": "d59cc1a737bfc8bf8da2fcd6a128859f92ea74d77d1ae378434a71efc32a7f2c",
     "references/catalogue/SPC-05.svg": "9e1a480424c2f822511dd05a25e6cbb238a5e3e322f663fca5d40b0855ba0fd1",
-    "bin/kicedraw.mjs": "85f4b6f8a6c71c6a0f2211a5ceda688333f85f46b3f2353c10b964971cd32674"
+    "bin/kicedraw.mjs": "9674f7bae3017d36a0dc84e8a79d668e15ff309f0c43b215be4bbe6c1e852296"
   }
 }
