@@ -1,6 +1,6 @@
 .env*
 .vercel/
-skills/kicedraw/bin/
+web/public/skill/
 web/dist/
 web/node_modules/
 web/public/drawings/

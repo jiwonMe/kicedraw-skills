@@ -5,6 +5,8 @@ description: 수능·평가원 스타일 수학 도면을 ClassGeo DSL로 작도
 
 # 수능 도면 작도와 비평
 
+호출될 때마다 먼저 스킬 폴더에서 `node bin/kicedraw.mjs update`를 실행한다. 업데이트가 적용되면 SKILL.md를 다시 읽고 계속한다. 오프라인에서는 기존 버전을 사용한다.
+
 기출 그림을 재현할 때는 [원본 대응 재현 예제 6종](references/reproductions/index.md)에서 비슷한 끝점·단면·숨은선 처리 방식을 먼저 확인한다. 새 도면은 [카탈로그](references/catalogue/index.md)에서 발문과 같은 기하 관계를 찾아 DSL을 참고한다. 이후 [작도 절차](references/workflow-drawing.md), 기존 도면의 결함 진단은 [비평 절차](references/workflow-critique.md)로 시작한다. 모든 스크립트 경로는 이 스킬 폴더 기준이다. 사용자의 작업 파일은 스킬 밖에 저장한다.
 
 ## 작도 규칙 12가지

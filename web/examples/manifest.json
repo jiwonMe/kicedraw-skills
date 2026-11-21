@@ -45,7 +45,7 @@
       "widthMm": 100,
       "sha256": {
         "dsl": "d0b63f2821b0d8e8fa6c243083501d2eaa81f9544b8115705c53af0afa983ea2",
-        "svg": "0fc87035a2f21ff74e195668749ad37a4dd36b89e5cf9f38a0d2efa1e28ff35e"
+        "svg": "1f105360cf1a94ed8103ffffd6211186880614b3962d692b7511a6e80f09b65e"
       }
     },
     {
@@ -69,7 +69,7 @@
       "widthMm": 124,
       "sha256": {
         "dsl": "e0227870dfdb98bdd0f624e1334425fcfb4718f437ea729b0c7a664281c96d35",
-        "svg": "fc40000405b19c801d5898a808e4157c1b98707dce7a0c277ef68c5090320cd3"
+        "svg": "3677d4e536065cfd3549c89df6ff64f6c9aafaaffae48a218011266b004f9b8e"
       }
     },
     {
@@ -81,7 +81,7 @@
       "widthMm": 92,
       "sha256": {
         "dsl": "4b4844d98c4f9395082cf3c9288635908300185229cee09d856d39a3c81d2da1",
-        "svg": "890118735b04d2b749a0f026d7d706163b5d5e141a1fd0fa6ab0561fb908bd6c"
+        "svg": "be9683799145ca30df48fc36ade9d1af1e5b130968fa38f4b4a7ea2c1e5843e6"
       }
     },
     {
@@ -93,7 +93,7 @@
       "widthMm": 84,
       "sha256": {
         "dsl": "c951a3b49636e1c59771a99ef70b13edb59a01cc3de243a435e78087d37ab06d",
-        "svg": "6be567b61fef33b31fb48dfe84c3625da09f8d62881bbdec8c834c9696679dd5"
+        "svg": "001ff9697f115f36ec33364d0021488e0024abc391e22f13816604cf5ab3160c"
       }
     },
     {
@@ -142,6 +142,18 @@
       "sha256": {
         "dsl": "8c5dd887c10a3bef4ec8fe14ff94b7cd70078f3800388390e679a54c9acda05b",
         "svg": "1ec3dcd7a9b6eaa3bf0ba689bf6e95e100bf5adbd922655829dce850dc8792b2"
+      }
+    },
+    {
+      "code": "REP-13",
+      "file": "cube-dihedral-ag",
+      "collection": "examples",
+      "title": "2007년 수능 6번 · 정육면체의 두 평면",
+      "summary": "공간 대각선 AG를 공유하는 삼각형 AFG와 AGH만 서로 다른 농도로 채우고 숨은 모서리는 점선으로 표시한다.",
+      "widthMm": 62,
+      "sha256": {
+        "dsl": "b609839075420c3a5475c7e19b47c129978ff82436886aed80f9680f6144cab8",
+        "svg": "2d0f1793243e357274344d62975a9eccfc383e1eb4cbfa17fe2839530488b687"
       }
     }
   ]

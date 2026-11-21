@@ -1,6 +1,12 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
+  "headers": [
+    {
+      "source": "/skill/latest.json",
+      "headers": [{ "key": "Cache-Control", "value": "no-store" }]
+    }
+  ],
   "installCommand": "npm ci --prefix web",
   "buildCommand": "npm run build --prefix web",
   "outputDirectory": "web/dist"

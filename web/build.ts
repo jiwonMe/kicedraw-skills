@@ -1,4 +1,5 @@
 import { readFile, writeFile, mkdir, rm } from "node:fs/promises";
+import { packageSkill } from "./package-skill";
 import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
 import { join } from "node:path";
@@ -26,7 +27,11 @@ await rm(dest, { recursive: true, force: true });
 await mkdir(dest, { recursive: true });
 const seen = new Set<string>();
 async function publish(e: Drawing, dir: string, basename: string) {
-  if (!/^REP-\d\d$/.test(e.code) || seen.has(e.code) || !/^[\w-]+$/.test(basename))
+  if (
+    !/^REP-\d\d$/.test(e.code) ||
+    seen.has(e.code) ||
+    !/^[\w-]+$/.test(basename)
+  )
     throw Error(`잘못된 도면 코드 또는 파일명: ${e.code}`);
   seen.add(e.code);
   for (const ext of ["svg", "dsl"] as const) {
@@ -37,6 +42,24 @@ async function publish(e: Drawing, dir: string, basename: string) {
   }
 }
 for (const e of examples)
-  await publish(e, e.collection === "examples" ? examplesDir : join(refs, "reproductions"), e.file);
-await writeFile(join(dest, "gallery.json"), JSON.stringify(examples.map(({code,title,summary,widthMm})=>({code,title,summary,widthMm}))));
+  await publish(
+    e,
+    e.collection === "examples" ? examplesDir : join(refs, "reproductions"),
+    e.file,
+  );
+await writeFile(
+  join(dest, "gallery.json"),
+  JSON.stringify(
+    examples.map(({ code, title, summary, widthMm }) => ({
+      code,
+      title,
+      summary,
+      widthMm,
+    })),
+  ),
+);
+await packageSkill(
+  join(here, "../skills/kicedraw"),
+  join(here, "public/skill"),
+);
 console.log(`재현 도면 ${examples.length}종의 SVG·DSL을 검증했습니다.`);
