@@ -95,6 +95,18 @@
         "dsl": "c951a3b49636e1c59771a99ef70b13edb59a01cc3de243a435e78087d37ab06d",
         "svg": "6be567b61fef33b31fb48dfe84c3625da09f8d62881bbdec8c834c9696679dd5"
       }
+    },
+    {
+      "code": "REP-09",
+      "file": "exp-log-vertical",
+      "collection": "examples",
+      "title": "지수·로그함수와 수직선이 만드는 두 삼각형",
+      "summary": "수직선 x=k와 두 함수의 교점 A, B를 잡고, 직선 BC와 로그함수의 x절편 D로 삼각형 ABC와 BCD를 구분한다. a=2, k=4는 재현용 값이다.",
+      "widthMm": 68,
+      "sha256": {
+        "dsl": "aaebf9c119b13607b95fd65ee6fddcbb4229014868cbf4af4d0b6a9169b1531a",
+        "svg": "195044fa0a39641c0a00e09e96394f64164923f696a217f0560f0e4e8911f9fd"
+      }
     }
   ]
 }
