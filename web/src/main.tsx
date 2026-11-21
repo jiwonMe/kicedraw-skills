@@ -200,7 +200,7 @@ function App() {
               관계기반 일러스트
             </h1>
             <p>
-              삼각형의 세 점을 정하면 내접원과 외접원이 따라옵니다.
+              수선의 발과 교점이 두 음영 영역의 경계를 정합니다.
               <br />
               도면을 열어 그 관계를 적은 DSL을 살펴보세요.
             </p>
@@ -209,23 +209,17 @@ function App() {
             </a>
           </div>
           <figure className="plate">
-            <svg
-              className="plate-drawing"
-              viewBox="95 190 480 510"
-              role="img"
-              aria-labelledby="plate-title"
-            >
-              <title id="plate-title">
-                같은 삼각형의 세 변에 접하는 내접원과 세 꼭짓점을 지나는 외접원
-              </title>
-              <image href={asset("TRI-06", "svg")} width="709" height="709" />
-            </svg>
+            <img
+              className="plate-drawing object-contain"
+              src={asset("REP-02", "svg")}
+              alt="삼각형의 수선과 원호, 교점 E를 경계로 나뉜 두 음영 영역"
+            />
             <figcaption>
               <div>
-                <small className="plate-id">TRI-06 · 60 mm</small>
-                <strong>삼각형의 내접원과 외접원</strong>
+                <small className="plate-id">REP-02 · 95 mm</small>
+                <strong>삼각형의 수선과 원호</strong>
               </div>
-              <a href="#TRI-06">DSL 보기 ↗</a>
+              <a href="#REP-02">DSL 보기 ↗</a>
             </figcaption>
           </figure>
         </section>
