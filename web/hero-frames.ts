@@ -202,7 +202,7 @@ export function heroFrame(id: string, original: string, u: number): string {
         "---annotations---",
       ].join("\n"));
       swap(/^name_p: Text\(.*$/m, String.raw`name_p: Annotation(planeLabel, label="$\alpha$", labelPosition="right", labelDistance=10, pointSize=0)`, "plane name");
-      swap(/^name_c: Text\(.*$/m, String.raw`name_c: Annotation(E, label="$\mathrm{C}_1$", labelPosition="left", labelDistance=20, pointSize=0)`, "section name");
+      swap(/^name_c: Text\(.*$/m, String.raw`name_c: Annotation(E, label="$\mathrm{C}_1$", labelPosition="left", labelDistance=24, pointSize=0)`, "section name");
       label("A", "bottom-left", 18);
       break;
     case "REP-04":
