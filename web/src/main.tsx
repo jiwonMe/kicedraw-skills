@@ -12,16 +12,6 @@ interface Drawing {
   summary: string;
   widthMm: number;
 }
-const families: Readonly<Record<string, string>> = {
-  REP: "따라 그린 도면",
-  CAL: "미적분",
-  EXP: "지수·로그",
-  TRI: "삼각형·삼각함수",
-  SEQ: "수열",
-  CON: "이차곡선",
-  VEC: "벡터",
-  SPC: "공간도형",
-};
 const asset = (id: string, ext: "svg" | "dsl") => `/drawings/${id}.${ext}`;
 function Copy({ value, label = "복사" }: { value: string; label?: string }) {
   const [status, set] = useState("");
@@ -142,7 +132,6 @@ function Detail({ item, close }: { item: Drawing; close: () => void }) {
 function App() {
   const [entries, load] = useState<Drawing[]>([]),
     [failed, fail] = useState(false),
-    [family, filter] = useState("전체"),
     [query, search] = useState(""),
     [hash, navigate] = useState(location.hash.slice(1));
   useEffect(() => {
@@ -157,14 +146,10 @@ function App() {
     window.addEventListener("hashchange", update);
     return () => window.removeEventListener("hashchange", update);
   }, []);
-  const reproductions = entries.filter(({ code }) =>
-    code.startsWith("REP-"),
-  ).length;
   const selected = entries.find((e) => e.code === hash),
     visible = entries.filter(
       (e) =>
-        (family === "전체" || e.code.startsWith(family)) &&
-        `${e.title} ${e.summary} ${e.code} ${families[e.code.slice(0, 3)]}`
+        `${e.title} ${e.summary} ${e.code}`
           .toLowerCase()
           .includes(query.trim().toLowerCase()),
     );
@@ -220,14 +205,7 @@ function App() {
           <div className="sectionhead">
             <div>
               <h2>도면 갤러리</h2>
-              <p>
-                {entries.length > 0 && (
-                  <>
-                    기본 도면 {entries.length - reproductions}종 · 따라 그린
-                    도면 {reproductions}종
-                  </>
-                )}
-              </p>
+              {entries.length > 0 && <p>따라 그린 도면 {entries.length}종</p>}
             </div>
             <label className="search">
               검색{" "}
@@ -238,22 +216,6 @@ function App() {
                 placeholder="도면 이름 또는 코드"
               />
             </label>
-          </div>
-          <div
-            id="filters"
-            className="flex flex-wrap gap-2"
-            role="group"
-            aria-label="분야 선택"
-          >
-            {["전체", ...Object.keys(families)].map((f) => (
-              <button
-                key={f}
-                aria-pressed={family === f}
-                onClick={() => filter(f)}
-              >
-                {families[f] || f}
-              </button>
-            ))}
           </div>
           <div
             id="count"
@@ -269,8 +231,8 @@ function App() {
               : !entries.length
                 ? "도면을 불러오는 중…"
                 : visible.length
-                  ? `${family === "전체" ? "전체" : families[family]} · ${visible.length}종`
-                  : "검색 결과가 없습니다. 다른 검색어나 분야를 선택해 주세요."}
+                  ? `검색 결과 ${visible.length}종`
+                  : "검색 결과가 없습니다. 다른 검색어를 입력해 주세요."}
           </div>
           <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-3">
             {visible.map((e) => (
@@ -285,7 +247,6 @@ function App() {
                   {e.code} · {e.widthMm} mm
                 </small>
                 <strong>{e.title}</strong>
-                <span>{families[e.code.slice(0, 3)]}</span>
               </a>
             ))}
           </div>

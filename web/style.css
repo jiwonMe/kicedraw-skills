@@ -213,21 +213,6 @@ h2 {
   background: white;
   max-width: 100%;
 }
-#filters {
-  gap: 4px 16px;
-  padding: 0 0 12px;
-  margin-bottom: 16px;
-  border-bottom: 1px solid var(--line);
-}
-#filters button {
-  padding: 8px 0 4px;
-  border-bottom: 2px solid transparent;
-  color: var(--muted);
-  font-size: 14px;
-}
-#filters button:hover {
-  color: var(--ink);
-}
 dialog button {
   color: var(--ink);
   background: transparent;
@@ -235,11 +220,6 @@ dialog button {
   border-radius: 4px;
   font-size: 14px;
   padding: 7px 12px;
-}
-#filters [aria-pressed="true"] {
-  color: var(--blue);
-  font-weight: 600;
-  border-color: currentColor;
 }
 #count:not(.sr-only) {
   margin: 0 0 12px;
