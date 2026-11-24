@@ -262,6 +262,16 @@ function App() {
             <a href={repo + "#readme"}>에이전트별 사용 안내 ↗</a>
           </p>
         </section>
+        <section id="downloads" aria-labelledby="downloads-title">
+          <h2 id="downloads-title">편집기와 조판 플러그인</h2>
+          <h3 className="mt-4">VS Code · Cursor</h3>
+          <p>확장 메뉴에서 <strong>Install from VSIX…</strong>를 선택하세요. <code>.kicedraw</code> 파일을 열고 첫 줄의 ‘비주얼 편집기 열기’를 누르면 도형을 편집할 수 있습니다.</p>
+          <a href="/downloads/kicedraw-editor-0.1.27.vsix" download>에디터 0.1.27 다운로드 (.vsix) ↓</a>
+          <h3 className="mt-4">Typst</h3>
+          <p>Typst 0.15 이상에서 <code>typst info</code>로 Package path를 확인하고, 그 디렉터리에 ZIP의 <code>local/</code> 폴더를 풀어 주세요.</p>
+          <div className="terminal"><code>{'#import "@local/kicedraw:0.2.1": kicedraw'}</code><Copy value={'#import "@local/kicedraw:0.2.1": kicedraw'} /></div>
+          <a href="/downloads/kicedraw-typst-0.2.1.zip" download>Typst 플러그인 0.2.1 다운로드 (.zip) ↓</a>
+        </section>
       </main>
       <footer>
         <b>KICEDraw</b>
