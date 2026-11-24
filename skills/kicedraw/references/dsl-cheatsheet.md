@@ -10,6 +10,7 @@ Safe default for width=50,height=50: keep primary geometry roughly in x,y ∈ [-
 @created: "<ISO8601>"
 @modified: "<ISO8601>"
 @mathRenderer: "mathjax"  # optional offline local typesetter. Default "upmath": uncached TeX is sent to https://i.upmath.me. Plain text is never sent.
+@printWidthMm: 60  # optional physical print width in mm; positive finite number, no unit suffix
 @frame: x=<n>, y=<n>, width=<n>, height=<n>
 # optional: @viewport / @tool (UI state; omit unless editing existing file that has them)
 <object declarations>

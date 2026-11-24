@@ -44,6 +44,6 @@ node bin/kicedraw.mjs svg /path/figure.dsl /path/figure.svg
 node bin/kicedraw.mjs png /path/figure.svg /path/figure.png
 ```
 
-`node bin/kicedraw.mjs check`의 오류를 해결하고 경고는 발문과 대조해 수정하거나 의도한 이유를 보고한다. 기본 폭이 아니면 `node bin/kicedraw.mjs check`와 `node bin/kicedraw.mjs svg`에 동일한 `--width-mm`를 준다. 린트 통과는 시각 검수를 대신하지 않는다. PNG가 없거나 열 수 없으면 이전 버전 PNG로 대체하지 않는다.
+`node bin/kicedraw.mjs check`의 오류를 해결하고 경고는 발문과 대조해 수정하거나 의도한 이유를 보고한다. 편집 원본 `.kicedraw`에 `@printWidthMm: 60`처럼 실제 인쇄 폭(mm)을 기록한다. 다른 폭으로 검수할 때만 두 명령에 동일한 `--width-mm`를 준다. 인쇄 크기에서 라벨과 축·곡선의 간격을 확인하고 점 이름은 정체로 쓴다. 린트 통과는 시각 검수를 대신하지 않는다. PNG가 없거나 열 수 없으면 이전 버전 PNG로 대체하지 않는다.
 
 보고 양식: `DSL/SVG 경로 | 인쇄 폭 | DSL 검증 결과 | PNG 경로·백엔드 또는 Pending 사유 | 직접 확인한 내용 및 남은 문제`.
